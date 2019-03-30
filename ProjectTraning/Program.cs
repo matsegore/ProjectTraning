@@ -10,8 +10,12 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
+            short num1 = 10;
+            short num2 = 15;
+            Console.WriteLine($"{num1} + {num2} = {Program.Sum(num1, num2)}");
+            Console.ReadLine();
             //Task2();
-            Task3();
+            //Task3();
             /*Console.WriteLine("Hello");
             Console.WriteLine("Введите радиус");
             string radiusString = Console.ReadLine();
@@ -55,6 +59,12 @@ namespace ProjectTraning
             Console.WriteLine($"{b}");
             Console.WriteLine($"{c}");
         }
+
+        public static int Sum(int x, int y)
+        {
+            return x + y;
+        }
+
     }
 }
 

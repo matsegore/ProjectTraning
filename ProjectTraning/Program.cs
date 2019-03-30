@@ -19,7 +19,6 @@ namespace ProjectTraning
             Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
         }
 
-
         public static decimal PerformCalculation(int r)
         {
             const decimal Pi = 3.14m;
@@ -28,7 +27,6 @@ namespace ProjectTraning
 
             return square;*/
         }
-
 
         public static void Task1()
         {
@@ -39,6 +37,7 @@ namespace ProjectTraning
             int myVariable;
 
         }
+
         public static void Task2()
         {
             decimal pi = 3.141592653m;
@@ -46,6 +45,7 @@ namespace ProjectTraning
             Console.WriteLine($"Число P: {pi}");
             Console.WriteLine($"Число Ейлера: {e}");
         }
+
         public static void Task3()
         {
             string a = "\nмоя строка1";

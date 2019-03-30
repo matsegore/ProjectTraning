@@ -10,7 +10,8 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Task2();
+            //Task2();
+            Task3();
             /*Console.WriteLine("Hello");
             Console.WriteLine("Введите радиус");
             string radiusString = Console.ReadLine();
@@ -44,6 +45,15 @@ namespace ProjectTraning
             decimal e = 3.7182818284590452m;
             Console.WriteLine($"Число P: {pi}");
             Console.WriteLine($"Число Ейлера: {e}");
+        }
+        public static void Task3()
+        {
+            string a = "\nмоя строка1";
+            string b = "\tмоя строка2";
+            string c = "\aмоя строка3";
+            Console.WriteLine($"{a}");
+            Console.WriteLine($"{b}");
+            Console.WriteLine($"{c}");
         }
     }
 }

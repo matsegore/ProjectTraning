@@ -12,8 +12,8 @@ namespace ProjectTraning
         {
             //Task1();
             //Task2();
-            Task3();
-            //Task4();
+            //Task3();
+            Task4();
         }
 
         public static void Task1()
@@ -62,6 +62,22 @@ namespace ProjectTraning
             {
                 Console.WriteLine("The condition is not satisfied");
             }
+        }
+        public static void Task4()
+        {
+            int x = 10;
+            int y = 12;
+            int z = 3;
+            x += y - x++ * z;
+            Console.WriteLine($"First result {x}");
+            z = --x - y * 5;
+            Console.WriteLine($"Second result {z}");
+            y /= x + 5 % z;
+            Console.WriteLine($"Third result {y}");
+            z = x++ + y * 5;
+            Console.WriteLine($"Fourth result {z}");
+            x = y - x++ * z;
+            Console.WriteLine($"Fifth result {x}");
         }
     }
 }

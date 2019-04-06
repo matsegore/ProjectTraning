@@ -14,10 +14,10 @@ namespace ProjectTraning
             //Task2();
             //Task3();
             //Task4();
-            //Task5();
+            Task5();
             //Task6();
             //Task7();
-            Task8();
+            //Task8();
         }
 
         public static void Task1()
@@ -88,69 +88,89 @@ namespace ProjectTraning
 
         public static void Task5()
         {
-            Console.WriteLine("Add first number");
-            int operand1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Add second number");
-            int operand2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Add ar operation");
-            string sign = Console.ReadLine();
-            int result;
-            switch (sign)
+            while (true)
             {
-                case "+":
-                    result = operand1 + operand2;
-                    Console.WriteLine(result);
-                    break;
-                case "-":
-                    result = operand1 - operand2;
-                    Console.WriteLine(result);
-                    break;
-                case "/":
-                    if (operand1 == 0)
-                    {
-                        Console.WriteLine("Error");
-                    }
-                    else
-                    {
-                        result = operand1 / operand2;
+                Console.WriteLine("Add first number");
+                if   (!Int32.TryParse(Console.ReadLine(), out int operand1))
+                {
+                    Console.WriteLine("Add correct value");
+                    continue;
+                }               
+                Console.WriteLine("Add second number");
+                int operand2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Add ar operation");
+                string sign = Console.ReadLine();
+                int result;
+                switch (sign)
+                {
+                    case "+":
+                        result = operand1 + operand2;
                         Console.WriteLine(result);
-                    }
                         break;
-                    
-                case "*":
-                    result = operand1 * operand2;
-                    Console.WriteLine(result);
+                    case "-":
+                        result = operand1 - operand2;                        
+                        Console.WriteLine(result);
+                        break;
+                    case "/":
+                        if (operand1 == 0)
+                        {
+                            Console.WriteLine("Error");
+                        }
+                        else
+                        {
+                            result = operand1 / operand2;
+                            Console.WriteLine(result);
+                        }
+                        break;
+
+                    case "*":
+                        result = operand1 * operand2;
+                        Console.WriteLine(result);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid sign");
+                        break;
+                }
+                Console.WriteLine("Pres Y for continue or N for exit");
+                string a = Console.ReadLine();
+                if (a == "N")
+                {
                     break;
-                default:
-                    Console.WriteLine("Invalid sign");
-                    break;
+                }
+                if (a == "Y")
+                {
+                    continue;
+                }
             }
         }
 
         public static void Task6()
         {
             Console.WriteLine("Add number");
-            int numb = Convert.ToInt32(Console.ReadLine());
-            if ((numb>100)||(numb<0))
+            int numb = Convert.ToInt32(Console.ReadLine());         
             {
-                Console.WriteLine("Error number out of range");
-            }
-            if ((numb>=0)&(numb<=14))
-            {
-                Console.WriteLine("Between 0-14");
-            }
-            if ((numb >= 15) & (numb <= 35))
-            {
-                Console.WriteLine("Between 15-35");
-            }
-            if ((numb >= 36) & (numb <= 50))
-            {
-                Console.WriteLine("Between 36-50");
-            }
-            if ((numb >= 50) & (numb <= 100))
-            {
-                Console.WriteLine("Between 50-100");
-            }           
+                if ((numb > 100) || (numb < 0))
+                {
+                    Console.WriteLine("Error number out of range");
+                    
+                }
+                if ((numb >= 0) & (numb <= 14))
+                {
+                    Console.WriteLine("Between 0-14");
+                }
+                if ((numb >= 15) & (numb <= 35))
+                {
+                    Console.WriteLine("Between 15-35");
+                }
+                if ((numb >= 36) & (numb <= 50))
+                {
+                    Console.WriteLine("Between 36-50");
+                }
+                if ((numb >= 50) & (numb <= 100))
+                {
+                    Console.WriteLine("Between 50-100");
+                }
+            }          
         }
         public static void Task7()
         {

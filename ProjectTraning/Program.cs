@@ -10,17 +10,44 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите колво секунд");
-            int sec = Convert.ToInt32(Console.ReadLine());
-            int hour = sec / 3600;
-            Console.WriteLine($"Прошло полных часов {hour}");
-            if (hour == 24)
+            //Task1();
+            Task2();
+            //Task3();
+            //Task4();
+        }
+
+        public static void Task1()
             {
-                Console.WriteLine("Прошел 1 день");
+                Console.WriteLine("Введите колво секунд");
+                int sec = Convert.ToInt32(Console.ReadLine());
+                int hour = sec / 3600;
+                Console.WriteLine($"Прошло полных часов {hour}");
+                if (hour == 24)
+                {
+                    Console.WriteLine("Прошел 1 день");
+                }
+                else if (hour > 24)
+                {
+                    Console.WriteLine("Вы вышли за диапазон 1го дня");
+                }
             }
-            else if (hour > 24)
+
+        public static void Task2()
+        {
+            Console.WriteLine("Add number A");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add number B");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add number C");
+            int C = Convert.ToInt32(Console.ReadLine());
+            
+            if ((B > A) & (B < C))
             {
-                Console.WriteLine("Вы вышли за диапазон 1го дня");
+                Console.WriteLine("Number B between A and C");
+            }
+            else
+            {
+                Console.WriteLine("Number B is not between A and C");
             }
         }
     }

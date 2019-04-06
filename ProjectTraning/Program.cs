@@ -15,7 +15,8 @@ namespace ProjectTraning
             //Task3();
             //Task4();
             //Task5();
-            Task6();
+            //Task6();
+            Task7();
         }
 
         public static void Task1()
@@ -150,5 +151,52 @@ namespace ProjectTraning
                 Console.WriteLine("Between 50-100");
             }           
         }
+        public static void Task7()
+        {
+            Console.WriteLine("Введите слово");
+            string word = Console.ReadLine();
+            Console.WriteLine("Английская версия");
+            string translation;
+            switch (word)
+            {
+                case "зима":
+                    translation = "winter";
+                    Console.WriteLine(translation);
+                    break;
+                case "лето":
+                    translation = "sumer";
+                    Console.WriteLine(translation);
+                    break;
+                case "осень":
+                    translation = "autumn";
+                    Console.WriteLine(translation);
+                    break;
+                case "весна":
+                    translation = "spring";
+                    Console.WriteLine(translation);
+                    break;
+                case "дождь":
+                    translation = "rain";
+                    Console.WriteLine(translation);
+                    break;
+                case "снег":
+                    translation = "snow";
+                    Console.WriteLine(translation);
+                    break;
+                case "ветер":
+                    translation = "wind";
+                    Console.WriteLine(translation);
+                    break;
+                case "температура":
+                    translation = "temperature";
+                    Console.WriteLine(translation);
+                    break;
+                case "циклон":
+                    translation = "cyclone";
+                    Console.WriteLine(translation);
+                    break;
+            }
+        }
+
     }
 }

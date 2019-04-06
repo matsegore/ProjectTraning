@@ -13,7 +13,8 @@ namespace ProjectTraning
             //Task1();
             //Task2();
             //Task3();
-            Task4();
+            //Task4();
+            Task5();
         }
 
         public static void Task1()
@@ -50,6 +51,7 @@ namespace ProjectTraning
                 Console.WriteLine("Number B is not between A and C");
             }
         }
+
         public static void Task3()
         {
             Console.WriteLine("Add Number");
@@ -63,6 +65,7 @@ namespace ProjectTraning
                 Console.WriteLine("The condition is not satisfied");
             }
         }
+
         public static void Task4()
         {
             int x = 10;
@@ -78,6 +81,48 @@ namespace ProjectTraning
             Console.WriteLine($"Fourth result {z}");
             x = y - x++ * z;
             Console.WriteLine($"Fifth result {x}");
+        }
+
+        public static void Task5()
+        {
+            Console.WriteLine("Add first number");
+            int operand1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add second number");
+            int operand2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add ar operation");
+            string sign = Console.ReadLine();
+            int result;
+            switch (sign)
+            {
+                case "+":
+                    result = operand1 + operand2;
+                    Console.WriteLine(result);
+                    break;
+                case "-":
+                    result = operand1 - operand2;
+                    Console.WriteLine(result);
+                    break;
+                case "/":
+                    if (operand1 == 0)
+                    {
+                        Console.WriteLine("Error");
+                    }
+                    else
+                    {
+                        result = operand1 / operand2;
+                        Console.WriteLine(result);
+                    }
+                        break;
+                    
+                case "*":
+                    result = operand1 * operand2;
+                    Console.WriteLine(result);
+                    break;
+                default:
+                    Console.WriteLine("Invalid sign");
+                    break;
+            }
+
         }
     }
 }

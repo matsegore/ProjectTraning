@@ -10,21 +10,18 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
-            Console.WriteLine("Введите радиус");
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
-        }
-
-
-        public static decimal PerformCalculation(int r)
-        {
-            const decimal Pi = 3.14m;
-
-            decimal square = Pi * r * r;
-
-            return square;
+            Console.WriteLine("Введите колво секунд");
+            int sec = Convert.ToInt32(Console.ReadLine());
+            int hour = sec / 3600;
+            Console.WriteLine($"Прошло полных часов {hour}");
+            if (hour == 24)
+            {
+                Console.WriteLine("Прошел 1 день");
+            }
+            else if (hour > 24)
+            {
+                Console.WriteLine("Вы вышли за диапазон 1го дня");
+            }
         }
     }
 }

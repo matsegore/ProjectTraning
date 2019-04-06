@@ -11,8 +11,8 @@ namespace ProjectTraning
         static void Main(string[] args)
         {
             //Task1();
-            Task2();
-            //Task3();
+            //Task2();
+            Task3();
             //Task4();
         }
 
@@ -48,6 +48,19 @@ namespace ProjectTraning
             else
             {
                 Console.WriteLine("Number B is not between A and C");
+            }
+        }
+        public static void Task3()
+        {
+            Console.WriteLine("Add Number");
+            int numb = Convert.ToInt32(Console.ReadLine());
+            if ((numb % 2 != 0) & (numb <= 999) & (numb >= 100))
+            {
+                Console.WriteLine("Number three-digit and odd");
+            }
+            else
+            {
+                Console.WriteLine("The condition is not satisfied");
             }
         }
     }

@@ -16,7 +16,8 @@ namespace ProjectTraning
             //Task4();
             //Task5();
             //Task6();
-            Task7();
+            //Task7();
+            Task8();
         }
 
         public static void Task1()
@@ -198,5 +199,63 @@ namespace ProjectTraning
             }
         }
 
+        public static void Task8()
+        {
+            Console.WriteLine("Введите зарплату");
+           double salary = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите выслугу");
+            double vislug = Convert.ToInt32(Console.ReadLine());
+            double prem;
+            double resultpWithPrem;
+            if (vislug <= 5)
+            {
+                prem = salary * 0.1;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if (vislug < 5)
+            {
+                prem = salary * 0.1;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if ((vislug >= 5) & (vislug <10))
+            {
+                prem = salary * 0.15;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if ((vislug >= 10) & (vislug < 15))
+            {
+                prem = salary * 0.25;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if ((vislug >= 15) & (vislug < 20))
+            {
+                prem = salary * 0.35;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if ((vislug >= 20) & (vislug < 25))
+            {
+                prem = salary * 0.45;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+            if (vislug >= 25)
+            {
+                prem = salary * 0.5;
+                resultpWithPrem = prem + salary;
+                Console.WriteLine($"Премия: {prem}");
+                Console.WriteLine($"Зарплата+премия {resultpWithPrem}");
+            }
+        }
     }
 }

@@ -14,7 +14,8 @@ namespace ProjectTraning
             //Task2();
             //Task3();
             //Task4();
-            Task5();
+            //Task5();
+            Task6();
         }
 
         public static void Task1()
@@ -122,7 +123,32 @@ namespace ProjectTraning
                     Console.WriteLine("Invalid sign");
                     break;
             }
+        }
 
+        public static void Task6()
+        {
+            Console.WriteLine("Add number");
+            int numb = Convert.ToInt32(Console.ReadLine());
+            if ((numb>100)||(numb<0))
+            {
+                Console.WriteLine("Error number out of range");
+            }
+            if ((numb>=0)&(numb<=14))
+            {
+                Console.WriteLine("Between 0-14");
+            }
+            if ((numb >= 15) & (numb <= 35))
+            {
+                Console.WriteLine("Between 15-35");
+            }
+            if ((numb >= 36) & (numb <= 50))
+            {
+                Console.WriteLine("Between 36-50");
+            }
+            if ((numb >= 50) & (numb <= 100))
+            {
+                Console.WriteLine("Between 50-100");
+            }           
         }
     }
 }

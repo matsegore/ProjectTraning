@@ -11,9 +11,9 @@ namespace ProjectTraning
         static void Main(string[] args)
         {
 
-            Task1();
+            //Task1();
             //Task5();
-            //Task5t();
+            Task5t();
             //Task6();
         }
         static void Task1()
@@ -46,10 +46,35 @@ namespace ProjectTraning
                 converting /= 10;
             }
             Console.WriteLine(temp);
-
-
-
         }
 
+        static void Task5()
+        {
+            int a = 1;
+            int b = 4;
+            int temp = 0;
+            for (int i = a; i <= b; i++)
+            {
+                temp += i;
+
+            }
+            Console.WriteLine(temp);
+        }
+
+        static void Task5t()
+        {
+            int a = 1;
+            int b = 4;
+            int temp = 0;
+            for (int i = a; i <= b; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+
+        }
     }
 }

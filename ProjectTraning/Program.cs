@@ -18,8 +18,9 @@ namespace ProjectTraning
             //Task7();
             //Task9();
             //Task10();
-            //Task11();
-            Task13();
+            Task11();
+            //Task12();
+            //Task13();
             //Task16();
 
 
@@ -183,7 +184,9 @@ namespace ProjectTraning
             int a = Convert.ToInt32(Console.ReadLine());
             int temp = 0;
             int k = 1;
-            Console.WriteLine("Fibonachi numers: ");
+            Console.WriteLine("Fibonachi numbers: ");
+            Console.WriteLine(temp);
+            Console.WriteLine(k);
             for (int i = 0; i <= a; i++)
             {
                 temp = temp + k;
@@ -204,6 +207,25 @@ namespace ProjectTraning
                     break;
                 }
 
+            }
+            
+        }
+
+        public static void Task12()
+        {
+            Console.WriteLine("Add Number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            int b = 1;
+            Console.WriteLine("Fib Numbers:");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            for (int i = 0; i<n-2; i++)
+            {
+                int temp = a;
+                a = b;
+                b = temp + b;
+                Console.WriteLine(b);
             }
             
         }

@@ -93,5 +93,27 @@ namespace ProjectTraning
             }
             Console.WriteLine(temp);
         }
+
+        public static void Task1()
+        {
+            while (true)
+            {
+                Console.WriteLine("Input Value or N for exit: ");
+                int x = Convert.ToInt32(Console.ReadLine());
+                if (x > 0)
+                {
+                    int result = 1;
+                    for (int i = 1; i <= x; i++)
+                    {
+                        result = result * i;
+                    }
+                    Console.WriteLine($"F = {result}");
+                }
+                else
+                {
+                    Console.WriteLine("Add correct number");
+                }
+            }
+        }
     }
 }

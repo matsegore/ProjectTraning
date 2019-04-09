@@ -13,10 +13,11 @@ namespace ProjectTraning
 
             //Task1();
             //Task5();
-            Task5t();
+            //Task5t();
             //Task6();
+            Task16();
         }
-        static void Task1()
+        static void Task16()
         {
             Console.WriteLine("Add number");
             string str = Console.ReadLine();

@@ -14,8 +14,8 @@ namespace ProjectTraning
             //Task1();
             //Task5();
             //Task5t();
-            //Task6();
-            Task16();
+            Task6();
+            //Task16();
         }
         static void Task16()
         {
@@ -76,6 +76,22 @@ namespace ProjectTraning
 
             }
 
+        }
+
+        static void Task6()
+        {
+            Console.WriteLine("Add Number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int temp = 0;
+            for (int i = 0; i <= a; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    temp++;
+                }
+
+            }
+            Console.WriteLine(temp);
         }
     }
 }

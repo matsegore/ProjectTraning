@@ -14,7 +14,8 @@ namespace ProjectTraning
             //Task1();
             //Task5();
             //Task5t();
-            Task6();
+            //Task6();
+            Task7();
             //Task16();
         }
         static void Task16()
@@ -113,6 +114,31 @@ namespace ProjectTraning
                 {
                     Console.WriteLine("Add correct number");
                 }
+            }
+        }
+
+        public static void Task7()
+        {
+            Console.WriteLine("Add First Number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add Second Number");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int counter = 0;
+            int temp = 0;
+            if (b >= a)
+            {
+                for (int i = a; i <= b; i++)
+                {
+                    counter++;
+                    temp += i;
+
+                }
+                int result = temp / counter;
+                Console.WriteLine($"Average: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Add correct diapason");
             }
         }
     }

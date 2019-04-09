@@ -18,7 +18,8 @@ namespace ProjectTraning
             //Task7();
             //Task9();
             //Task10();
-            Task11();
+            //Task11();
+            Task12();
             //Task16();
 
 
@@ -175,6 +176,7 @@ namespace ProjectTraning
                 }
             }
         }
+
         public static void Task11()
         {
             Console.WriteLine("Add Number");
@@ -205,5 +207,20 @@ namespace ProjectTraning
             }
             
         }
+
+        public static void Task12()
+        {
+            Console.WriteLine("Add Number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int renumber = 0;
+            while (number > 0)
+            { //25
+                renumber *= 10;  //0 50
+                renumber += number % 10; //5 52
+                number /= 10; //2 0
+            }
+            Console.WriteLine($"Overturn:{renumber}");
+        }
+
     }
 }

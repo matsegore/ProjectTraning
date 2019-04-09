@@ -181,7 +181,7 @@ namespace ProjectTraning
             int a = Convert.ToInt32(Console.ReadLine());
             int temp = 0;
             int k = 1;
-            Console.Write("Fibonachi numers: ");
+            Console.WriteLine("Fibonachi numers: ");
             for (int i = 0; i <= a; i++)
             {
                 temp = temp + k;
@@ -189,17 +189,21 @@ namespace ProjectTraning
 
                 if (temp < a)
                 {
-                    Console.Write(temp);
+                    Console.WriteLine(temp);
 
                 }
                 if (k < a)
                 {
-                    Console.Write(k);
+                    Console.WriteLine(k);
                     
+                }
+                if ((temp > a) | (k > a))
+                {
+                    break;
                 }
 
             }
-            Console.WriteLine();
+            
         }
     }
 }

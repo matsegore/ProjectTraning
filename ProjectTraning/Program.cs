@@ -17,8 +17,8 @@ namespace ProjectTraning
             //Task6();
             //Task7();
             //Task9();
-            Task10();
-            //Task11();
+            //Task10();
+            Task11();
             //Task16();
 
 
@@ -166,10 +166,10 @@ namespace ProjectTraning
             Console.WriteLine("Add Number");
             int a = Convert.ToInt32(Console.ReadLine());
             int temp = 0;
-            for (int i = 1; i < a; i++)
+            for (int i = 1; i <= a; i++)
             {
                 temp = i*i;
-                if (temp < a)
+                if (temp <= a)
                 {
                     Console.WriteLine(temp);
                 }
@@ -179,15 +179,27 @@ namespace ProjectTraning
         {
             Console.WriteLine("Add Number");
             int a = Convert.ToInt32(Console.ReadLine());
-            int temp = 1;
-            for (int i = 1; i < a; i++)
+            int temp = 0;
+            int k = 1;
+            Console.Write("Fibonachi numers: ");
+            for (int i = 0; i <= a; i++)
             {
-                temp = i + i;
+                temp = temp + k;
+                k = k + temp;
+
                 if (temp < a)
                 {
-                    Console.WriteLine(temp);
+                    Console.Write(temp);
+
                 }
+                if (k < a)
+                {
+                    Console.Write(k);
+                    
+                }
+
             }
+            Console.WriteLine();
         }
     }
 }

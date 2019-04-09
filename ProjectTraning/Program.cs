@@ -19,7 +19,7 @@ namespace ProjectTraning
             //Task9();
             //Task10();
             //Task11();
-            Task12();
+            Task13();
             //Task16();
 
 
@@ -208,7 +208,7 @@ namespace ProjectTraning
             
         }
 
-        public static void Task12()
+        public static void Task13()
         {
             Console.WriteLine("Add Number");
             int number = Convert.ToInt32(Console.ReadLine());

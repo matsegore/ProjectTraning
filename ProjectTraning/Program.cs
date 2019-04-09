@@ -15,8 +15,10 @@ namespace ProjectTraning
             //Task5();
             //Task5t();
             //Task6();
-            Task7();
+            //Task7();
+            Task9();
             //Task16();
+
         }
         static void Task16()
         {
@@ -140,6 +142,21 @@ namespace ProjectTraning
             {
                 Console.WriteLine("Add correct diapason");
             }
+
+        }
+
+        public static void Task9()
+        {
+            Console.WriteLine("Add First Number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add Second Number");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int temp = 0;
+            for (int i = 1; i <= b; i++)
+            {
+                temp += a ;               
+            }
+            Console.WriteLine($"Произведение: {temp}");
         }
     }
 }

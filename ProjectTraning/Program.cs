@@ -12,13 +12,14 @@ namespace ProjectTraning
         {
 
             //Task1();
+            //Task2();
             //Task5();
             //Task5t();
             //Task6();
             //Task7();
-            //Task9();
+            Task9();
             //Task10();
-            Task11();
+            //Task11();
             //Task12();
             //Task13();
             //Task16();
@@ -159,9 +160,18 @@ namespace ProjectTraning
             int temp = 0;
             for (int i = 1; i <= b; i++)
             {
-                temp += a ;               
+                temp += a;
+
             }
-            Console.WriteLine($"Произведение: {temp}");
+            if (b < 0)
+            {
+                for (int k = b; k <= (-1); k++)
+                {
+                    temp += a;
+                }
+                
+            }
+            Console.WriteLine($"Proizvedeniye: {temp}");
         }
         public static void Task10()
         {
@@ -170,7 +180,7 @@ namespace ProjectTraning
             int temp = 0;
             for (int i = 1; i <= a; i++)
             {
-                temp = i*i;
+                temp = i * i;
                 if (temp <= a)
                 {
                     Console.WriteLine(temp);
@@ -200,7 +210,7 @@ namespace ProjectTraning
                 if (k < a)
                 {
                     Console.WriteLine(k);
-                    
+
                 }
                 if ((temp > a) | (k > a))
                 {
@@ -208,7 +218,7 @@ namespace ProjectTraning
                 }
 
             }
-            
+
         }
 
         public static void Task12()
@@ -220,14 +230,14 @@ namespace ProjectTraning
             Console.WriteLine("Fib Numbers:");
             Console.WriteLine(a);
             Console.WriteLine(b);
-            for (int i = 0; i<n-2; i++)
+            for (int i = 0; i < n - 2; i++)
             {
                 int temp = a;
                 a = b;
                 b = temp + b;
                 Console.WriteLine(b);
             }
-            
+
         }
 
         public static void Task13()
@@ -244,5 +254,23 @@ namespace ProjectTraning
             Console.WriteLine($"Overturn:{renumber}");
         }
 
+        public static void Task2()
+        {
+            int a, b, c;
+            for (a = 1; a <= 5; a++)
+            {
+                for (b = 4; b >= a; b--)
+                {
+                    Console.Write(" ");
+                }
+                for (c = 1; c <= (2 * a - 1); c++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
     }
-}
+    }
+

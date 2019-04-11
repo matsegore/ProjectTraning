@@ -13,15 +13,17 @@ namespace ProjectTraning
 
             //Task1();
             //Task2();
+            Task3();
             //Task5();
             //Task5t();
             //Task6();
             //Task7();
-            Task9();
+            //Task9();
             //Task10();
             //Task11();
             //Task12();
             //Task13();
+            //Task14();
             //Task16();
 
 
@@ -167,9 +169,10 @@ namespace ProjectTraning
             {
                 for (int k = b; k <= (-1); k++)
                 {
-                    temp += a;
+                    temp += (-a);
+
                 }
-                
+
             }
             Console.WriteLine($"Proizvedeniye: {temp}");
         }
@@ -246,10 +249,10 @@ namespace ProjectTraning
             int number = Convert.ToInt32(Console.ReadLine());
             int renumber = 0;
             while (number > 0)
-            { //25
-                renumber *= 10;  //0 50
-                renumber += number % 10; //5 52
-                number /= 10; //2 0
+            {
+                renumber *= 10;
+                renumber += number % 10;
+                number /= 10;
             }
             Console.WriteLine($"Overturn:{renumber}");
         }
@@ -271,6 +274,61 @@ namespace ProjectTraning
             }
             Console.ReadLine();
         }
+
+        public static void Task14()
+        {
+            Console.WriteLine("Add Number");
+            string number = Console.ReadLine();
+            int number2 = Convert.ToInt32(number);
+            int renumber = 0;
+            int temp;
+            while (number2 > 0)
+            {
+                renumber *= 10;
+                renumber += number2 % 10;
+                number2 /= 10;
+            }
+            Console.WriteLine("Numbers:");
+            for (int i = 0; i < number.Length; i++)
+            {
+                temp = renumber % 10;
+                renumber /= 10;
+
+                Console.WriteLine(temp);
+            }
+
+        }
+
+        public static void Task3()
+        {
+            Console.WriteLine("Add Number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            bool b = true;
+            int counter = 0;
+            for (int i = 2; i <= number; i++)
+            {
+                b = true;
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        b = false;
+                        break;
+                    }
+                }
+                
+
+            }
+            if (b == true)
+            {
+                Console.WriteLine("Prime number");
+            }
+            else
+            {
+                Console.WriteLine("Not prime number");
+            }
+        }
     }
-    }
+}
+
 

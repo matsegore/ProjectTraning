@@ -23,12 +23,11 @@ namespace ProjectTraning
             //Task11();
             //Task12();
             //Task13();
-            //Task15();
             //Task14();
+            //Task15();
             //Task16();
-            Task17();
-
-
+            //Task17();
+            Task18();
         }
         static void Task16()
         {
@@ -396,6 +395,29 @@ namespace ProjectTraning
             }
             Console.WriteLine(max);
         }
+
+        public static void Task18()
+        {
+            Console.WriteLine("Add Number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            {
+                Console.WriteLine("Operation for Odd number");
+                while (number > 1)
+                {
+                    if (number % 2 == 0)
+                    {
+                        number /= 2;
+                    }
+                    else if (number % 2 != 0)
+                    {
+                        number *= 3;
+                        number += 1;
+                    }
+                    Console.WriteLine(number);
+                }
+            }          
+        }
+
     }
 }
 

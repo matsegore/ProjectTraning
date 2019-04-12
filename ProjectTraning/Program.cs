@@ -13,7 +13,7 @@ namespace ProjectTraning
 
             //Task1();
             //Task2();
-            Task3();
+            //Task3();
             //Task5();
             //Task5t();
             //Task6();
@@ -23,8 +23,10 @@ namespace ProjectTraning
             //Task11();
             //Task12();
             //Task13();
+            //Task15();
             //Task14();
             //Task16();
+            Task17();
 
 
         }
@@ -330,41 +332,69 @@ namespace ProjectTraning
                 }
                 Console.WriteLine("Positive Number");
 
-
                 if (temp % 2 == 0)
-                {
-                    
+                {                    
                     text += "2" + " ";
                 }
                 if (number % 5 == 0)
-                {
-                    
+                {                   
                     text += "5" + " ";
                 }
                 if (number % 3 == 0)
-                {
-                    
+                {                   
                     text += "3" + " ";
-                }
-
+                }           
                 if (number % 6 == 0)
-                {
-                     
+                {                     
                     text += "6" + " ";
                 }
-
                 if (number % 9 == 0)
-                {
-                    
+                {                   
                     text += "9"+" ";
                 }
-
                 Console.WriteLine("Divides without balance on: " + text);
             }
             else
             {
                 Console.WriteLine("Negative number");              
             }
+        }
+
+        public static void Task15()
+        {
+            Console.WriteLine("Add Number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add Exponent");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            int temp = number;
+            for (int i =1; i<number2; i++)
+            {
+                temp *= number;
+                
+
+            }
+            Console.WriteLine("Result:" + temp);
+        }
+
+        public static void Task17()
+        {
+            Console.WriteLine("Add Number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            string numbers = number.ToString();
+            int temp = 0;
+            int max = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                temp = number % 10;
+                number /= 10;
+                
+                if (max < temp)
+                {
+                    max += temp;
+                }
+                
+            }
+            Console.WriteLine(max);
         }
     }
 }

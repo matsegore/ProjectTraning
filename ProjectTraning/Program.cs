@@ -304,28 +304,66 @@ namespace ProjectTraning
             Console.WriteLine("Add Number");
             int number = Convert.ToInt32(Console.ReadLine());
             bool b = true;
-            int counter = 0;
-            for (int i = 2; i <= number; i++)
+            string text = "";
+            if (number >= 0)
             {
-                b = true;
-                for (int j = 2; j < i; j++)
+                int temp = number;
+                for (int i = 2; i <= number; i++)
                 {
-                    if (i % j == 0)
+                    b = true;
+                    for (int j = 2; j < i; j++)
                     {
-                        b = false;
-                        break;
+                        if (i % j == 0)
+                        {
+                            b = false;
+                            break;
+                        }
                     }
                 }
-                
+                if (b == true)
+                {
+                    Console.WriteLine("Prime number");
+                }
+                else
+                {
+                    Console.WriteLine("Not prime number");
+                }
+                Console.WriteLine("Positive Number");
 
-            }
-            if (b == true)
-            {
-                Console.WriteLine("Prime number");
+
+                if (temp % 2 == 0)
+                {
+                    
+                    text += "2" + " ";
+                }
+                if (number % 5 == 0)
+                {
+                    
+                    text += "5" + " ";
+                }
+                if (number % 3 == 0)
+                {
+                    
+                    text += "3" + " ";
+                }
+
+                if (number % 6 == 0)
+                {
+                     
+                    text += "6" + " ";
+                }
+
+                if (number % 9 == 0)
+                {
+                    
+                    text += "9"+" ";
+                }
+
+                Console.WriteLine("Divides without balance on: " + text);
             }
             else
             {
-                Console.WriteLine("Not prime number");
+                Console.WriteLine("Negative number");              
             }
         }
     }

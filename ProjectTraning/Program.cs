@@ -10,21 +10,57 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
-            Console.WriteLine("Введите радиус");
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
+            Task1();
         }
-
-
-        public static decimal PerformCalculation(int r)
+        public static void Task1()
         {
-            const decimal Pi = 3.14m;
+            Console.WriteLine("Задайте размер массива");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[a];
+            var temp = new Random();
 
-            decimal square = Pi * r * r;
+            Console.WriteLine("Заполните значениями массив");
+            for (int i=0; i<array.Length; i++)
+            {          
+                array[i] = temp.Next(0, 1000);
+                Console.WriteLine($"Значение массива {array[i]}");
+            }
+            int max = array[0];
+            int min = array[0];
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                }
+                if (min > array[i])
+                {
+                    min = array[i];
+                }
 
-            return square;
+            }
+            Console.WriteLine($"Максимально число массива: {max}");
+            Console.WriteLine($"Минимальное число массива: {min}");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            Console.WriteLine($"Сумма чисел: {sum}");
+           
+                sum /= array.Length;
+           
+            Console.WriteLine($"Среднее Арифметическое: {sum}");
+            Console.WriteLine($"Нечетные числа: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 != 0)
+                {
+                    Console.WriteLine(array[i]);
+                }
+            }
         }
+
     }
 }

@@ -15,7 +15,13 @@ namespace ProjectTraning
             //Task3();
             //Task4();
             int[] array = new int[] { 1, 2, 3 };
+            
             MyReverse(array);
+            int [] reversed = MyReverse(array);
+            for (int i =0; i<reversed.Length; i++)
+            {
+                Console.WriteLine(reversed[i]);
+            }
         }
         public static void Task1()
         {
@@ -163,13 +169,14 @@ namespace ProjectTraning
             }
         }
 
-        public static int MyReverse(int [] array)
+        public static int[] MyReverse(int [] array)
         {
-            for(int i =0; i<array.Length; i++)
-            {
-
+            int[] reversedArray = new int [array.Length];
+            for (int i = 0; i < array.Length; i++)
+            {              
+                reversedArray[array.Length - i - 1]=array[i];               
             }
-            return;
+            return reversedArray;
         }
     }
     }

@@ -13,7 +13,9 @@ namespace ProjectTraning
             //Task1();
             //Task2();
             //Task3();
-            Task4();
+            //Task4();
+            int[] array = new int[] { 1, 2, 3 };
+            MyReverse(array);
         }
         public static void Task1()
         {
@@ -64,6 +66,7 @@ namespace ProjectTraning
                 }
             }
         }
+
         public static void Task2()
         {
 
@@ -97,8 +100,8 @@ namespace ProjectTraning
             {
                 Console.WriteLine(arrayWithoutDup[item]);
             }
-
         }
+
         public static void Task3()
         {
             Console.WriteLine("Add max");
@@ -126,6 +129,7 @@ namespace ProjectTraning
                 }
             }
         }
+
         public static void Task4()
         {
             Console.WriteLine("Задайте размер массива");
@@ -157,6 +161,15 @@ namespace ProjectTraning
                     Console.WriteLine(array[i]);
                 }
             }
+        }
+
+        public static int MyReverse(int [] array)
+        {
+            for(int i =0; i<array.Length; i++)
+            {
+
+            }
+            return;
         }
     }
     }

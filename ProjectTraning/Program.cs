@@ -12,7 +12,8 @@ namespace ProjectTraning
         {
             //Task1();
             //Task2();
-            Task3();
+            //Task3();
+            Task4();
         }
         public static void Task1()
         {
@@ -122,6 +123,38 @@ namespace ProjectTraning
                  else if (min > array[i])
                 {
                     Console.WriteLine($"Less than min: {array[i]}");
+                }
+            }
+        }
+        public static void Task4()
+        {
+            Console.WriteLine("Задайте размер массива");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[a];
+            var temp = new Random();
+
+            Console.WriteLine("Заполните значениями массив");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = temp.Next(0, 1000);
+                Console.WriteLine($"Значение массива {array[i]}");
+            }
+            int max = array[0];
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            Console.WriteLine($"Сумма чисел: {sum}");
+            sum /= array.Length;
+
+            Console.WriteLine($"Среднее Арифметическое: {sum}");
+            Console.WriteLine($"Числа которые больше средного арифметического: ");
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > sum)
+                {
+                    Console.WriteLine(array[i]);
                 }
             }
         }

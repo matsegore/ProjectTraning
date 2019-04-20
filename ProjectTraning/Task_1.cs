@@ -19,7 +19,14 @@ namespace ProjectTraning
             Console.WriteLine (ShowResult (firstArgiment, secondArgument, symbol));
             
         }
-
+        private static double Check (double firstnumb, double secondnumb)
+        {
+            if (!Int32.TryParse(Console.ReadLine(), out int operand1))
+            {
+                Console.WriteLine("Add correct value");
+                continue;
+            }
+        }
         public static double WhitchSign (double firstnumb, double secondnumb, string symbol)
         {
             double result =0;
@@ -74,11 +81,10 @@ namespace ProjectTraning
             return firstnumb * secondnumb;
         }
 
+
         private static double ShowResult (double firstnumb, double secondnumb, string symbol)
         {
             return WhitchSign(firstnumb, secondnumb, symbol);
-
-
         }
     }
 }

@@ -10,30 +10,47 @@ namespace ProjectTraning
     {
         public static void Task1()
         {
-            Console.WriteLine("Add first number: ");
-            double firstArgiment = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Add second number: ");
-            double secondArgument = Convert.ToInt32(Console.ReadLine());
+
+            double[] arrayOfArg = GetNumbers();
+            double firstArgiment = arrayOfArg[0];
+            double secondArgument = arrayOfArg[1];
             Console.WriteLine("Chuse operation:");
             string symbol = Console.ReadLine();
             ShowResult(firstArgiment, secondArgument, symbol);
         }
-        static double Chek(double firstnumb, double secondnumb, bool result)
-        {
-            double counter = 0;
-            if (!Int32.TryParse(Console.ReadLine(), out int operand1))
-            {
-                counter++;
-            }
-            if (counter == 1)
-            {
-                return Chek();
 
-            }
-        }
-    public static double WhitchSign (double firstnumb, double secondnumb, string symbol)
+        static double[] GetNumbers()
         {
-            double result =0;
+            double[] array = new double[2];
+            while (true){
+                Console.WriteLine("Add first number: ");
+                if (Int32.TryParse(Console.ReadLine(), out int operand1))
+                {
+                    array[0] = operand1;
+                }
+                else
+                {
+                    Console.WriteLine("Add correct value");
+                    continue;
+                }
+                Console.WriteLine("Add second number: ");
+                if (Int32.TryParse(Console.ReadLine(), out int operand2))
+                {
+                    array[1] = operand2;
+                }
+                else
+                {
+                    Console.WriteLine("Add correct value");
+                    continue;
+                }
+                return array;
+            }
+
+        }
+
+        public static double WhitchSign(double firstnumb, double secondnumb, string symbol)
+        {
+            double result = 0;
             switch (symbol)
             {
 
@@ -60,7 +77,7 @@ namespace ProjectTraning
                 default:
                     Console.WriteLine("Invalid sign");
                     break;
-                    
+
             }
             return result;
         }
@@ -82,11 +99,11 @@ namespace ProjectTraning
 
         private static double Div(double firstnumb, double secondnumb)
         {
-            return firstnumb * secondnumb;
+            return firstnumb / secondnumb;
         }
 
 
-        private static void ShowResult (double firstnumb, double secondnumb, string symbol)
+        private static void ShowResult(double firstnumb, double secondnumb, string symbol)
         {
             Console.WriteLine(WhitchSign(firstnumb, secondnumb, symbol));
         }

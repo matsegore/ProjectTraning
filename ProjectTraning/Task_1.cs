@@ -16,18 +16,22 @@ namespace ProjectTraning
             double secondArgument = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Chuse operation:");
             string symbol = Console.ReadLine();
-            Console.WriteLine (ShowResult (firstArgiment, secondArgument, symbol));
-            
+            ShowResult(firstArgiment, secondArgument, symbol);
         }
-        private static double Check (double firstnumb, double secondnumb)
+        static double Chek(double firstnumb, double secondnumb, bool result)
         {
+            double counter = 0;
             if (!Int32.TryParse(Console.ReadLine(), out int operand1))
             {
-                Console.WriteLine("Add correct value");
-                continue;
+                counter++;
+            }
+            if (counter == 1)
+            {
+                return Chek();
+
             }
         }
-        public static double WhitchSign (double firstnumb, double secondnumb, string symbol)
+    public static double WhitchSign (double firstnumb, double secondnumb, string symbol)
         {
             double result =0;
             switch (symbol)
@@ -37,7 +41,7 @@ namespace ProjectTraning
                     result = Task_1.Add(firstnumb, secondnumb);
                     break;
                 case "-":
-                    result =  Sub(firstnumb, secondnumb);
+                    result = Task_1.Sub(firstnumb, secondnumb);
                     break;
                 case "/":
                     if (firstnumb == 0 || secondnumb == 0)
@@ -51,7 +55,7 @@ namespace ProjectTraning
                     break;
 
                 case "*":
-                    result = Mul(firstnumb, secondnumb);
+                    result = Task_1.Mul(firstnumb, secondnumb);
                     break;
                 default:
                     Console.WriteLine("Invalid sign");
@@ -82,9 +86,9 @@ namespace ProjectTraning
         }
 
 
-        private static double ShowResult (double firstnumb, double secondnumb, string symbol)
+        private static void ShowResult (double firstnumb, double secondnumb, string symbol)
         {
-            return WhitchSign(firstnumb, secondnumb, symbol);
+            Console.WriteLine(WhitchSign(firstnumb, secondnumb, symbol));
         }
     }
 }

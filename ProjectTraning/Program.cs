@@ -10,21 +10,41 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
-            Console.WriteLine("Введите радиус");
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
+            Task1();
+        }
+        public static void Task1()
+        {
+            Console.WriteLine("Add first number: ");
+            int firstArgiment = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Add second number: ");
+            int secondArgument = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Chuse operation:");
+            string symbol = Console.ReadLine();
+
         }
 
-
-        public static decimal PerformCalculation(int r)
+        private static int Add(int firstnumb, int secondnumb)
         {
-            const decimal Pi = 3.14m;
+            int adding = firstnumb + secondnumb;
+            return adding;
+        }
 
-            decimal square = Pi * r * r;
+        private static int Sub(int firstnumb, int secondnumb)
+        {
+            int subtr = firstnumb - secondnumb;
+            return subtr;
+        }
 
-            return square;
+        private static int Mul(int firstnumb, int secondnumb)
+        {
+            int mult = firstnumb * secondnumb;
+            return mult;
+        }
+
+        private static int Div(int firstnumb, int secondnumb)
+        {
+            int div = firstnumb * secondnumb;
+            return div;
         }
     }
 }

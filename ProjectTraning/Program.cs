@@ -10,8 +10,8 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Task_1.Task1();
-
+            //Task_1.Task1();
+            Task_2.Task2();
         }      
     }
 }

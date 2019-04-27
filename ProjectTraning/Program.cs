@@ -10,21 +10,48 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
-            Console.WriteLine("Введите радиус");
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
+            Task4();
         }
-
-
-        public static decimal PerformCalculation(int r)
+        public static void Task4()
         {
-            const decimal Pi = 3.14m;
+            var arrayNumbers = new char[10] { '0','1','2','3','4','5','6','7','8','9'};
+            var arraySymbols = new char [11] {':','+','/','.','^','@','"','!','%','#','$'};
+            Console.WriteLine("Add size of array");
+            int arraySize = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[arraySize];
+            var newArray = new char[arraySize];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Add number: ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
 
-            decimal square = Pi * r * r;
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < newArray.Length; j++)
+                {
+                    while ((i<=10) && (array[i] != arrayNumbers[j]))
+                    {
+                        if (j <= 10)
+                        {
+                            newArray[i] = arraySymbols[j];
+                            break;
+                        }
+                        else
+                        {
+                            newArray[i] = arraySymbols[11];
+                            break;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("Result");
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                Console.WriteLine(newArray[i]);
+            }
 
-            return square;
         }
     }
 }
+

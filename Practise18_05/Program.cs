@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTraning
+namespace Practise18_05
 {
     class Program
     {

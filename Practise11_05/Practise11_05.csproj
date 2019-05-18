@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DEE5009-B585-4560-A6F8-4392D91EF5F0}</ProjectGuid>
+    <ProjectGuid>{24B98B4E-F7FF-4AE3-9350-D8334318F7F7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProjectTraning</RootNamespace>
-    <AssemblyName>ProjectTraning</AssemblyName>
+    <RootNamespace>Practise11_05</RootNamespace>
+    <AssemblyName>Practise11_05</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bicycle.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Moto.cs" />
-    <Compile Include="Vehicles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task1\Circle.cs" />
+    <Compile Include="Task1\Figure.cs" />
+    <Compile Include="Task1\Rhombus.cs" />
+    <Compile Include="Task1\Square.cs" />
+    <Compile Include="Task1\Triangle.cs" />
+    <Compile Include="Task2\Flowers.cs" />
+    <Compile Include="Task2\Gallery.cs" />
+    <Compile Include="Task2\Plants.cs" />
+    <Compile Include="Task2\Trees.cs" />
+    <Compile Include="Task2\Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

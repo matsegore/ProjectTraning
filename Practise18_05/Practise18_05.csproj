@@ -45,6 +45,19 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task1\Circle.cs" />
+    <Compile Include="Task1\Execute.cs" />
+    <Compile Include="Task1\Figure.cs" />
+    <Compile Include="Task1\Square.cs" />
+    <Compile Include="Task1\Triangle.cs" />
+    <Compile Include="Task3\American.cs" />
+    <Compile Include="Task3\ExecuteTask3.cs" />
+    <Compile Include="Task3\Human.cs" />
+    <Compile Include="Task3\Ukrainian.cs" />
+    <Compile Include="Task4\Calculator.cs" />
+    <Compile Include="Task4\Operation.cs" />
+    <Compile Include="Task4\Subtraction.cs" />
+    <Compile Include="Task4\Sum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

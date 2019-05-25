@@ -10,21 +10,8 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
-            Console.WriteLine("Введите радиус");
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(radius)}");
-        }
-
-
-        public static decimal PerformCalculation(int r)
-        {
-            const decimal Pi = 3.14m;
-
-            decimal square = Pi * r * r;
-
-            return square;
-        }
+            //Task_1.Task1();
+            Task_2.Task2();
+        }      
     }
 }

@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTraning
+namespace Pract25_05.Task2
 {
-    class Program
+    class BankAccounts
     {
-        static void Main(string[] args)
-        {
-        }
+        
     }
 }

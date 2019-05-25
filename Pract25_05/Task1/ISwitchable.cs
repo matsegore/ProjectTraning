@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTraning
+namespace Pract25_05.Task1
 {
-    class Program
+    interface ISwitchable
     {
-        static void Main(string[] args)
-        {
-        }
+        void On();
+
+        void Off();
     }
 }

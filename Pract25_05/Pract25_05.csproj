@@ -48,7 +48,13 @@
     <Compile Include="Task1\Execute.cs" />
     <Compile Include="Task1\ISwitchable.cs" />
     <Compile Include="Task1\Lighting.cs" />
-    <Compile Include="Task2\BankAccounts.cs" />
+    <Compile Include="Task2\BankAccount.cs" />
+    <Compile Include="Task2\Banking.cs" />
+    <Compile Include="Task2\CraditCard.cs" />
+    <Compile Include="Task2\Deposit.cs" />
+    <Compile Include="Task2\IFreeOperation.cs" />
+    <Compile Include="Task2\IInterestRate.cs" />
+    <Compile Include="Task2\Standart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

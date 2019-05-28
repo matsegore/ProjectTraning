@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Pract25_05.Task2
 {
-    class BankAccounts
+    interface IFreeOperation
     {
-        
+        decimal AddMoney(decimal sumOfAdding);
+
+ 
     }
 }

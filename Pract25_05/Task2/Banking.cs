@@ -8,6 +8,28 @@ namespace Pract25_05.Task2
 {
     class Banking
     {
+        private static BankAccount[] bankAccounts = new BankAccount[1];
+
+        internal static void AddAccount(BankAccount bankAccount)
+        {
+            BankAccount[] extandetBankAccounts = {bankAccount};
+
+            //foreach (var item in Banking.bankAccounts)
+
+
+            for (int i = 0; i < Banking.bankAccounts.Length; i++)
+            {
+                for (int j = 0; j < extandetBankAccounts.Length; j++)
+                {
+                    Banking.bankAccounts[i] = extandetBankAccounts[j];
+                }  
+            }
+            foreach (var item in Banking.bankAccounts)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         public void CreateAcc()
         {
             while (true)
@@ -24,12 +46,15 @@ namespace Pract25_05.Task2
                 {
                     case 1:
                         Deposit deposit = new Deposit(name);
+                        Banking.AddAccount(deposit);
                         break;
                     case 2:
                         Standart standart = new Standart(name);
+                        Banking.AddAccount(standart);
                         break;
                     case 3:
                         CraditCard cradit = new CraditCard(name);
+                        Banking.AddAccount(cradit);
                         break;
                 }
 
@@ -43,7 +68,7 @@ namespace Pract25_05.Task2
                 {
                     break;
                 }
-            } 
+            }
         }
     }
 }

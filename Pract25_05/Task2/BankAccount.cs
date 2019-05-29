@@ -14,7 +14,7 @@ namespace Pract25_05.Task2
 
         public BankAccount (string owner)
         {
-
+            this.owner = owner;
         }
 
         public decimal Balance(decimal sum)
@@ -33,5 +33,7 @@ namespace Pract25_05.Task2
             this.currrentBalance -= sum;
             return $"Withdrawal amount {sum} sum for null of acc {this.currrentBalance}";
         }
+
+
     }
 }

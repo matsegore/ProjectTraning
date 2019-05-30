@@ -129,7 +129,7 @@ namespace Pract25_05.Task2
                                     }                               
                                     break;
                             }
-                            if (temp == 9 || temp2 == 9)
+                            if (temp == 9 || temp2 == 9 || temp3 == 9)
                             {
                                 break;
                             }

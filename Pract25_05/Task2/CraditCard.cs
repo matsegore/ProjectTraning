@@ -8,26 +8,34 @@ namespace Pract25_05.Task2
 {
     class CraditCard : BankAccount, IInterestRate, IFreeOperation
     {
-        public CraditCard (string owner)
-            : base(owner)
+        public CraditCard (string owner, decimal currrentBalance, BankType bankType)
+            : base(owner, currrentBalance, bankType)
         {
-
         }
 
         public decimal CalculateOfRate()
         {
-            this.currrentBalance /= (decimal)0.1;
-            return this.currrentBalance;
+            decimal rate = this.currrentBalance * (decimal)0.1;
+            return rate;
         }
 
-        public void InterestAccrual(decimal rate)
+        public decimal InterestAccrual(decimal rate)
         {
-            Console.WriteLine($"Sum with accrual: {this.currrentBalance + rate}");
+            decimal interestAccrual = this.currrentBalance + rate;
+            return interestAccrual;
         }
 
         public decimal AddMoney(decimal sumOfAdding)
         {
             this.currrentBalance += sumOfAdding;
+            Console.WriteLine($"The sum after adding is: {this.currrentBalance}");
+            return this.currrentBalance;
+        }
+
+        public decimal WithDrawBalance(decimal sum)
+        {
+            this.currrentBalance -= sum;
+            Console.WriteLine($"The sum after WithDraw is: {this.currrentBalance}");
             return this.currrentBalance;
         }
     }

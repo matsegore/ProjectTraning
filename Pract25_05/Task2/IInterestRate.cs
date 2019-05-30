@@ -10,6 +10,6 @@ namespace Pract25_05.Task2
     {
         decimal CalculateOfRate();
 
-        void InterestAccrual(decimal rate);
+        decimal InterestAccrual(decimal rate);
     }
 }

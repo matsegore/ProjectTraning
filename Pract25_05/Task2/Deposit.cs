@@ -8,21 +8,21 @@ namespace Pract25_05.Task2
 {
     class Deposit : BankAccount, IInterestRate
     {
-        public Deposit (string owner)
-            : base(owner)
+        public Deposit (string owner, decimal currrentBalance, BankType bankType)
+            : base(owner, currrentBalance, bankType)
         {
-
         }
 
-         public decimal CalculateOfRate()
+        public decimal CalculateOfRate()
         {
-            this.currrentBalance /= (decimal)0.1;
-            return this.currrentBalance;
+            decimal rate = this.currrentBalance * (decimal)0.1;
+            return rate;
         }
 
-        public void InterestAccrual(decimal rate)
+        public decimal InterestAccrual(decimal rate)
         {
-            Console.WriteLine($"Sum with accrual: {this.currrentBalance+rate}");
+            decimal interestAccrual = this.currrentBalance + rate;
+            return interestAccrual;
         }
     }
 }

@@ -12,16 +12,16 @@ namespace Pract25_05.Task2
 
         public string owner;
 
-        public BankAccount (string owner)
+        public BankType bankType;
+
+        public BankAccount (string owner, decimal currrentBalance, BankType bankType)
         {
             this.owner = owner;
+            this.currrentBalance = currrentBalance;
+            this.bankType = bankType;
         }
 
-        public decimal Balance(decimal sum)
-        {
-            this.currrentBalance -= sum;
-            return this.currrentBalance;
-        }
+       
 
         public string Owner()
         {
@@ -33,7 +33,5 @@ namespace Pract25_05.Task2
             this.currrentBalance -= sum;
             return $"Withdrawal amount {sum} sum for null of acc {this.currrentBalance}";
         }
-
-
     }
 }

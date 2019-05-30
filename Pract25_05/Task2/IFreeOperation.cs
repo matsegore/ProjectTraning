@@ -10,6 +10,7 @@ namespace Pract25_05.Task2
     {
         decimal AddMoney(decimal sumOfAdding);
 
- 
+        decimal WithDrawBalance(decimal sum);
+
     }
 }

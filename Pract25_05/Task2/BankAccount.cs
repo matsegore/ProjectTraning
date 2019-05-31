@@ -23,15 +23,15 @@ namespace Pract25_05.Task2
 
        
 
-        public string Owner()
+        /*public string Owner()
         {
             return $"The owner of bank account is {this.owner}";
-        }
+        }*/
 
-        public string NullBalance (decimal sum)
+        /*public string NullBalance (decimal sum)
         {
             this.currrentBalance -= sum;
             return $"Withdrawal amount {sum} sum for null of acc {this.currrentBalance}";
-        }
+        }*/
     }
 }

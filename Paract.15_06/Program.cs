@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Paract._15_06.Task1;
+using Paract._15_06.Task_2;
 namespace Paract._15_06
 {
     class Program
@@ -24,7 +25,17 @@ namespace Paract._15_06
 
             //var birthDate = new DateTime(1994, 5, 16);
             //Console.WriteLine(birthDate);
-            MaList<int> list = new MaList<int>();
+
+            //MaList<int> array = new MaList<int>();
+            //array.Add(2);
+            //array.Add(3);
+            //array.Add(4);
+            //Console.WriteLine($"Info about array {array.ToString()}");
+
+            new CarColection<Car>().Add(new Car(1994, "Ford"));
+            
+            Console.WriteLine();
+
         }
     }
 }

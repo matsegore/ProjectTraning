@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task 2\Car.cs" />
+    <Compile Include="Task 2\CarColection.cs" />
+    <Compile Include="Task 2\ICar.cs" />
     <Compile Include="Task1\IMyList.cs" />
     <Compile Include="Task1\MaList.cs" />
   </ItemGroup>

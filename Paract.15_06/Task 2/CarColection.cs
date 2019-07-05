@@ -5,14 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Paract._15_06.Task_2
 {
-    internal class CarColection <T> where T : Car
+    internal class CarColection<T> where T : Car
     {
-        private T[] carArr;
+        public T[] carArr;
 
         public CarColection()
         {
             this.carArr = new T[0];
         }
+
+        T this[string name]
+        {
+
+            get
+            {
+                T car = null;
+                for (int i = 0; i < carArr.Length; i++)
+                {
+                    if (carArr[i].Name.Equals(name) == true)
+                    {
+                        car = carArr[i];
+                    }
+                    else
+                    {
+                        throw new Exception("No name");
+                    }                  
+                }
+                return car;
+            }
+
+        }
+
 
         public void Add(T item)
         {
@@ -27,7 +50,17 @@ namespace Paract._15_06.Task_2
 
         public void Clear()
         {
+            carArr = new T[0];
+        }
 
+        public void Contains()
+        {
+            int counter = 0;
+            for (int i = 0; i < carArr.Length; i++)
+            {
+                counter++;
+            }
+            Console.WriteLine(counter);
         }
 
         public override string ToString()
@@ -35,11 +68,9 @@ namespace Paract._15_06.Task_2
             string text = "";
             for (int i = 0; i < carArr.Length; i++)
             {
-                text += carArr[i].ToString();
+                text += carArr[i];
             }
-            return text;
+            return $"{text}";
         }
-
-
     }
 }

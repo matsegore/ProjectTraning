@@ -32,9 +32,18 @@ namespace Paract._15_06
             //array.Add(4);
             //Console.WriteLine($"Info about array {array.ToString()}");
 
-            new CarColection<Car>().Add(new Car(1994, "Ford"));
+            CarColection<Car> array = new CarColection<Car>();
+
+            array.Add(new Car(1994, "Ford"));
+            array.Add(new Car(1995, "Fiat"));
+            Console.WriteLine(array.ToString());
+
+            Console.Write("Number of cars:");
+            array.Contains();
+
+            array.Clear();
+            Console.WriteLine($"Clear array: {array}");
             
-            Console.WriteLine();
 
         }
     }

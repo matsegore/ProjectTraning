@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task1\FolderPaths.cs" />
+    <Compile Include="Task1_rec\Folder.cs" />
     <Compile Include="Task2\CreateFile.cs" />
   </ItemGroup>
   <ItemGroup>

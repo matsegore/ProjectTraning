@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pract08_06.Task1;
+using Pract08_06.Task1_rec;
 
 namespace Pract08_06
 {
@@ -11,7 +12,8 @@ namespace Pract08_06
     {
         static void Main(string[] args)
         {
-            new FolderPath().Calc();
+            //new FolderPath().Calc();
+            new Folder().ShowFoldersAndSize();
         }
     }
 }

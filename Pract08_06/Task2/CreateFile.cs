@@ -16,7 +16,5 @@ namespace Pract08_06.Task2
         static FileStream files = file.Create();
 
         StreamWriter fs = new StreamWriter(files);
-
-        public 
     }
 }

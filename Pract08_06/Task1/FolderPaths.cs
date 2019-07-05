@@ -50,5 +50,6 @@ namespace Pract08_06.Task1
 
         }
 
+
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Pract08_06.Task1;
 using Pract08_06.Task1_rec;
 using Pract08_06.Task2;
+using Pract08_06.Task3;
 
 namespace Pract08_06
 {
@@ -15,7 +16,8 @@ namespace Pract08_06
         {
             //new FolderPath().Calc();
             //new Folder().ShowFoldersAndSize();
-            new CreateFile().CreateTextFile();
+            //new CreateFile().CreateTextFile();
+            new TextCount().CountText();
         }
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="Task1\FolderPaths.cs" />
     <Compile Include="Task1_rec\Folder.cs" />
     <Compile Include="Task2\CreateFile.cs" />
+    <Compile Include="Task3\TextCount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

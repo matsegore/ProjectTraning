@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DEE5009-B585-4560-A6F8-4392D91EF5F0}</ProjectGuid>
+    <ProjectGuid>{45F973B1-8D16-4FDD-8E4B-5A3701B7879E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProjectTraning</RootNamespace>
-    <AssemblyName>ProjectTraning</AssemblyName>
+    <RootNamespace>Paract._15_06</RootNamespace>
+    <AssemblyName>Paract.15_06</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task 2\Car.cs" />
+    <Compile Include="Task 2\CarColection.cs" />
+    <Compile Include="Task 2\ICar.cs" />
+    <Compile Include="Task1\IMyList.cs" />
+    <Compile Include="Task1\MaList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

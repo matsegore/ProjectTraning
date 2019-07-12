@@ -14,6 +14,10 @@ namespace Practise18_05.Task4
             sum.OperationForOperands(2,3);
             Operation subtraction = new Subtraction();
             subtraction.OperationForOperands (2, 3);
+            Operation multi = new Multiplication();
+            multi.OperationForOperands(2, 3);
+            Operation dev = new Devision();
+            dev.OperationForOperands(2, 3);
         }
     }
 }

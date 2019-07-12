@@ -62,6 +62,8 @@
     <Compile Include="Task3\Human.cs" />
     <Compile Include="Task3\Ukrainian.cs" />
     <Compile Include="Task4\Calculator.cs" />
+    <Compile Include="Task4\Devision.cs" />
+    <Compile Include="Task4\Multiplication.cs" />
     <Compile Include="Task4\Operation.cs" />
     <Compile Include="Task4\Subtraction.cs" />
     <Compile Include="Task4\Sum.cs" />

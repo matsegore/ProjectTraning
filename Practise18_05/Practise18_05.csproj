@@ -50,6 +50,12 @@
     <Compile Include="Task1\Figure.cs" />
     <Compile Include="Task1\Square.cs" />
     <Compile Include="Task1\Triangle.cs" />
+    <Compile Include="Task2Mamals\Aquatic.cs" />
+    <Compile Include="Task2Mamals\Arboreal.cs" />
+    <Compile Include="Task2Mamals\Arial.cs" />
+    <Compile Include="Task2Mamals\Mammal.cs" />
+    <Compile Include="Task2Mamals\Subterranean.cs" />
+    <Compile Include="Task2Mamals\Terrestrial.cs" />
     <Compile Include="Task3\American.cs" />
     <Compile Include="Task3\ExecuteTask3.cs" />
     <Compile Include="Task3\Human.cs" />
@@ -62,8 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Task2Mamals\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

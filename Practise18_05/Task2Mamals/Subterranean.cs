@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace Practise18_05.Task2Mamals
 {
-    class Subterranean: Mamals
-
-        public Subterranean(int age, int weight, string name)
-             : base(age, weight, name)
+    class Subterraneanal : Mammal
     {
+        public Subterraneanal(int age, int weight, string name)
+             : base(age, weight, name)
+        {
 
+        }
+
+        public override void Feed()
+        {
+            Console.WriteLine($"Mammal {this.name}, mamal age is {this.Age}");
+            this.Eat(10);
+            Console.WriteLine($"Weght of {this.name} was increased to {this.Weight}");
+        }
     }
 }

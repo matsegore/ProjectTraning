@@ -53,6 +53,7 @@
     <Compile Include="Task2Mamals\Aquatic.cs" />
     <Compile Include="Task2Mamals\Arboreal.cs" />
     <Compile Include="Task2Mamals\Arial.cs" />
+    <Compile Include="Task2Mamals\Feeder.cs" />
     <Compile Include="Task2Mamals\Mammal.cs" />
     <Compile Include="Task2Mamals\Subterranean.cs" />
     <Compile Include="Task2Mamals\Terrestrial.cs" />

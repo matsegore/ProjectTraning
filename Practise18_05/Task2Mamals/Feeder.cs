@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectTraning
+namespace Practise18_05.Task2Mamals
 {
-    class Program
+    class Feeder
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

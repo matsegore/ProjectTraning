@@ -45,6 +45,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task1\Game.cs" />
+    <Compile Include="Task1\Ping.cs" />
+    <Compile Include="Task1\Pong.cs" />
+    <Compile Include="Task2\PingPongEventArgs.cs" />
+    <Compile Include="Task2\Game.cs" />
+    <Compile Include="Task2\Ping.cs" />
+    <Compile Include="Task2\Pong.cs" />
+    <Compile Include="Task3\Rebit.cs" />
+    <Compile Include="Task_20_07\FridgeEventArgs.cs" />
+    <Compile Include="Task_20_07\ProgramForFridge.cs" />
+    <Compile Include="Task_20_07\FridgeRefreg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,60 +6,73 @@ using System.Threading.Tasks;
 
 namespace ProjectTraning.Task_20_07
 {
-    public delegate void FridgeDelegate(object a, FridgeEventArgs datetime);
+    public delegate void FridgeDelegate(object a, FridgeEventArgs e);
 
     public class ProgramForFridge
     {
-        public User User { get; set; }
-
-        public FridgeRefreg FridgeRefreg { get; set; }
+        public FridgeRefreg Fridge { get; set; }
 
         public ProgramForFridge()
         {
-            this.User = new User();
-            this.FridgeRefreg = new FridgeRefreg();
+            this.Fridge = new FridgeRefreg();
 
-            this.FridgeRefreg.Fridge += OnFridge;
-            this.FridgeRefreg.Fridge += OffFridge;
-            this.FridgeRefreg.Fridge += CloseMainDore;
-            this.FridgeRefreg.Fridge += OpenMainDore;
-            this.FridgeRefreg.Fridge += OpenSecondDore;
-            this.FridgeRefreg.Fridge += CloseSecondDore;
+            this.Fridge.Fridge += EventInvoke;
+
         }
 
-        public void Start()
+
+        public void Execute()
+
         {
-            FridgeRefreg.MainDorOpen();
+            while (true)
+            {
+
+                Console.WriteLine($"Состояние холодильника: \n{Fridge.StatusOfFridge()}");
+
+                Console.WriteLine("\nВыберите действие \n 1 - включить холодильник \n 2 - выключить холодильник \n 3 - открыть основную дверь \n 4 - закрыть основную дверь \n 5 - открыть морозилку \n 6 - закрыть морозилку \n 7 - выход из программы управления");
+                int result = Convert.ToInt32(Console.ReadLine());
+
+                if(result == 1)
+                {
+                    Fridge.FridgeOn();
+                }
+
+                if (result == 2)
+                {
+                    Fridge.FridgeOff();
+                }
+
+                if (result == 3)
+                {
+                    Fridge.MainDorOpen();
+                }
+
+                if (result == 4)
+                {
+                    Fridge.MainDorClose();
+                }
+
+                if (result == 5)
+                {
+                    Fridge.SecondDorOpen();
+                }
+
+                if (result == 6)
+                {
+                    Fridge.SecondDorClose();
+                }
+
+                if (result == 7)
+                {
+                    break;
+                }
+
+            }
         }
 
-        public void OnFridge(object sender, FridgeEventArgs e)
+        public void EventInvoke(object a, FridgeEventArgs e)
         {
-            User.On();
-        }
-
-        public void OffFridge(object sender, FridgeEventArgs e)
-        {
-            User.Off();
-        }
-
-        public void CloseMainDore(object sender, FridgeEventArgs e)
-        {
-            User.MainDorClose();
-        }
-
-        public void OpenMainDore(object sender, FridgeEventArgs e)
-        {
-            User.MainDorOpen();
-        }
-
-        public void OpenSecondDore(object sender, FridgeEventArgs e)
-        {
-            User.SecondDorClose();
-        }
-
-        public void CloseSecondDore(object sender, EventArgs e)
-        {
-            User.SecondDorOpen();
+            Console.WriteLine(e.Status);
         }
     }
 }

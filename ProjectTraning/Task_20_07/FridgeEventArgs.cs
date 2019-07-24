@@ -8,6 +8,11 @@ namespace ProjectTraning.Task_20_07
 {
     public class FridgeEventArgs : EventArgs
     {
+        public Enum Status { get; set; }
 
+        public FridgeEventArgs(Enum status)
+        {
+            this.Status = status;
+        }
     }
 }

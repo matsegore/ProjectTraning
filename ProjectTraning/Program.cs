@@ -15,7 +15,8 @@ namespace ProjectTraning
         {
             //new Game().Player();
             //new Game2().Player();
-            new ProgramForFridge().Start();
+            new ProgramForFridge().Execute();
+          
         }
 
     }

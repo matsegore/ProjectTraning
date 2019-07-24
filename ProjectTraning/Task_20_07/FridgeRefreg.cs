@@ -10,62 +10,82 @@ namespace ProjectTraning.Task_20_07
     {
         public event FridgeDelegate Fridge;
 
+        public Enum Status { get; set; } = ModesofOperation.On;
+
+        public Enum MainDor { get; set; } = ModesofOperation.Close;
+
+        public Enum SecondDor { get; set; } = ModesofOperation.Close;
+
         protected virtual void OnFridge(FridgeEventArgs e)
         {
             this.Fridge?.Invoke(this, e);
         }
 
-        public void FridgeOn()
+        public string StatusOfFridge()
         {
-            ModesofOperation On;
-            On = ModesofOperation.On;
-            this.OnFridge(new FridgeEventArgs());
+            return $"Status - {Status} \nMainDor - {MainDor} \nSecond Dor - {SecondDor}"; 
+        }
+
+        public void FridgeOn()
+        {          
+            Status = ModesofOperation.On;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nХолодильник принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(Status));
+            Console.ResetColor();
         }
 
         public void FridgeOff()
         {
-            ModesofOperation Off;
-            Off = ModesofOperation.Off;
-            this.OnFridge(new FridgeEventArgs());
+            Status = ModesofOperation.Off;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nХолодильник принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(Status));
+            Console.ResetColor();
         }
 
         public void MainDorOpen()
         {
-            ModesofOperation OpenMainDor;
-            OpenMainDor = ModesofOperation.OpenMainDor;
-            this.OnFridge(new FridgeEventArgs());
+            MainDor = ModesofOperation.Open;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nДверь холодильника принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(MainDor));
+            Console.ResetColor();
         }
 
         public void MainDorClose()
         {
-            ModesofOperation ClosMaineDor;
-            ClosMaineDor = ModesofOperation.ClosMaineDor;
-            this.OnFridge(new FridgeEventArgs());
+            MainDor = ModesofOperation.Close;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nДверь холодильника принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(MainDor));
+            Console.ResetColor();
         }
 
         public void SecondDorOpen()
         {
-            ModesofOperation OpenSecondDor;
-            OpenSecondDor = ModesofOperation.OpenSecondDor;
-            this.OnFridge(new FridgeEventArgs());
+            SecondDor = ModesofOperation.Open;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nДверь морозилки принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(SecondDor));
+            Console.ResetColor();
         }
 
         public void SecondDorClose()
         {
-
-            ModesofOperation ClosSecondDor;
-            ClosSecondDor = ModesofOperation.ClosSecondDor;
-            this.OnFridge(new FridgeEventArgs());
+            SecondDor = ModesofOperation.Close;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\nДверь морозилки принимает статус: ");
+            this.OnFridge(new FridgeEventArgs(SecondDor));
+            Console.ResetColor();
         }
 
         public enum ModesofOperation
         {
             On,
             Off,
-            OpenMainDor,
-            ClosMaineDor,
-            OpenSecondDor,
-            ClosSecondDor
+            Open,
+            Close
         }
     }
 }

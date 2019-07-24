@@ -54,7 +54,6 @@
     <Compile Include="Task2\Pong.cs" />
     <Compile Include="Task3\Rebit.cs" />
     <Compile Include="Task_20_07\FridgeEventArgs.cs" />
-    <Compile Include="Task_20_07\User.cs" />
     <Compile Include="Task_20_07\ProgramForFridge.cs" />
     <Compile Include="Task_20_07\FridgeRefreg.cs" />
   </ItemGroup>

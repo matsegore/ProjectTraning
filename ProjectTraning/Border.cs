@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjectTraning
 {
-    class Program
+    class Border
     {
-        static void Main(string[] args)
-        {
+        int borderHeight = 20;
 
-        }
+
     }
 }

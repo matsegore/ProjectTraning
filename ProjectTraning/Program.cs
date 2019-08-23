@@ -10,7 +10,7 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-
+            new Border().NewMatrics();
         }
     }
 }

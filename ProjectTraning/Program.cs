@@ -11,7 +11,11 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            new Matrix().MatrixExecute();
+            for (int i = 0; i < 50; i++)
+            {
+                Thread thr = new Thread(new ThreadStart(new Matrix().NewMatrics));
+                thr.Start();
+            }
         }
     }
 }

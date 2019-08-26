@@ -12,21 +12,47 @@ namespace ProjectTraning
 
         public int Width;
 
+
         public Field()
         {
-            this.Height = 20;
+            this.Height = 28;
 
-            this.Width = 10;
-
-            Console.SetWindowSize(40, 50);
+            this.Width = 90;
         }
 
         public void BordersOfField()
         {
-            for (int i = 0; i < this.Height; i++)
+            for (int i = 0; i <= this.Width; i++)
             {
                 Console.Write("*");
+                for (int j = 0; j <= this.Height; j++)
+                {
+                    if (i == this.Width)
+                    {
+                        Console.WriteLine("0");
+                    }
+                }
+
             }
+
+            //for (int i = 0; i <= this.Width; i++)
+            //{
+            //    Console.WriteLine("*");
+
+            //    if (i == this.Height)
+            //    {
+            //        for (int j = 0; j < this.Width; j++)
+            //        {
+            //            Console.Write("!");
+            //        }
+
+            //    }
+
+            //}
+
         }
+
+
     }
 }
+

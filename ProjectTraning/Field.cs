@@ -20,5 +20,13 @@ namespace ProjectTraning
 
             Console.SetWindowSize(40, 50);
         }
+
+        public void BordersOfField()
+        {
+            for (int i = 0; i < this.Height; i++)
+            {
+                Console.Write("*");
+            }
+        }
     }
 }

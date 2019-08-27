@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Border.cs" />
+    <Compile Include="Draw.cs" />
     <Compile Include="Field.cs" />
+    <Compile Include="GameLogic.cs" />
+    <Compile Include="MyCar.cs" />
+    <Compile Include="OtherCar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

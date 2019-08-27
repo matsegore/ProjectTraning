@@ -11,13 +11,16 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            Thread thrTwo = new Thread(new ThreadStart(new Field().BordersOfField));
-            thrTwo.Start();
 
+
+            new Field().BordersOfField();
+           
             Thread thr = new Thread(new ThreadStart(new Border().NewMatrics));
             thr.Start();
 
+            new GameLogic().Play();
             
+
         }
     }
 }

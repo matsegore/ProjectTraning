@@ -12,7 +12,6 @@ namespace ProjectTraning
 
         public int Width;
 
-
         public Field()
         {
             this.Height = 28;
@@ -22,37 +21,35 @@ namespace ProjectTraning
 
         public void BordersOfField()
         {
-            for (int i = 0; i <= this.Width; i++)
+            lock (Draw.locker)
             {
-                Console.Write("*");
-                for (int j = 0; j <= this.Height; j++)
+                for (int i = 0; i <= this.Width; i++)
                 {
-                    if (i == this.Width)
-                    {
-                        Console.WriteLine("0");
-                    }
+                    Console.SetCursorPosition(i, 0);
+                    Console.Write("*");
                 }
 
+                for (int i = 0; i <= this.Width; i++)
+                {
+                    Console.SetCursorPosition(i, this.Height);
+                    Console.Write("*");
+                }
+
+                for (int i = 0; i <= this.Height; i++)
+                {
+                    Console.SetCursorPosition(0, i);
+                    Console.WriteLine("#");
+                }
+
+                for (int i = 0; i <= this.Height; i++)
+                {
+                    Console.SetCursorPosition(this.Width, i);
+                    Console.WriteLine("#");
+                }
             }
-
-            //for (int i = 0; i <= this.Width; i++)
-            //{
-            //    Console.WriteLine("*");
-
-            //    if (i == this.Height)
-            //    {
-            //        for (int j = 0; j < this.Width; j++)
-            //        {
-            //            Console.Write("!");
-            //        }
-
-            //    }
-
-            //}
-
         }
-
-
     }
+
 }
+
 

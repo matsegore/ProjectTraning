@@ -20,6 +20,12 @@ namespace ProjectTraning
                 Console.Write(value);
             }
         }
+
+        public void Clear(int x, int y)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine(" ");
+        }
     }
 }
 

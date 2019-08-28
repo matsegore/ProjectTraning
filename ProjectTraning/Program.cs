@@ -14,13 +14,16 @@ namespace ProjectTraning
 
 
             new Field().BordersOfField();
-           
+
             Thread thr = new Thread(new ThreadStart(new Border().NewMatrics));
             thr.Start();
 
+            Thread thr1 = new Thread(new ThreadStart(new OtherCar().CarFolen));
+            thr1.Start();
+
+
             new GameLogic().Play();
             
-
         }
     }
 }

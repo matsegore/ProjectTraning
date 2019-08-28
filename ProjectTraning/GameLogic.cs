@@ -15,9 +15,9 @@ namespace ProjectTraning
         OtherCar othercar = new OtherCar();
         public void Play()
         {
-
+            
             mycar.Car();
-            othercar.CarFolen();
+
             while (true)
             {
                 var button = Console.ReadKey(true);
@@ -81,10 +81,6 @@ namespace ProjectTraning
 
 
 
-        public void Clear(int x, int y)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine(" ");
-        }
+        
     }
 }

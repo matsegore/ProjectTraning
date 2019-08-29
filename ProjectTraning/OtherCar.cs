@@ -9,154 +9,284 @@ namespace ProjectTraning
 {
     class OtherCar : Draw
     {
+        public static int Result { get; set; }
+
         Border border = new Border();
 
-        public void CarFolen()
+        public void CarFallingRight()
         {
-
             while (true)
             {
-
-                for (int i = 3, y = 3; i < 23+4; i++)
+                if (OtherCar.Result == 1)
                 {
-
+                    break;
+                }
+                int temp = 1;
+                for (int i = 3; i < 23 + 4; i++)
+                {
                     Thread.Sleep(100);
+
                     lock (locker)
                     {
                         if (i == 3)
                         {
-                            DrowMyCar(border.SecondRoadLine - 7, 3, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i, "+");
                         }
 
-                        if (i == 4)
+                        else if (i == 4)
                         {
-                            DrowMyCar(border.SecondRoadLine - 6, 3, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 3, "+");
-                            DrowMyCar(border.SecondRoadLine - 8, 3, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 4, "+");                            
+                            DrowMyCar(border.SecondRoadLine - 6, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 8, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i, "+");
                         }
 
-                        if (i == 5)
+                        else if (i == 5)
                         {
-                            Clear(border.SecondRoadLine - 6, 3);
-                            DrowMyCar(border.SecondRoadLine - 7, 3, "+");
-                            Clear(border.SecondRoadLine - 8, 3);
-                            DrowMyCar(border.SecondRoadLine - 6, 4, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 4, "+");
-                            DrowMyCar(border.SecondRoadLine - 8, 4, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 5, "+");
+                            Clear(border.SecondRoadLine - 6, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 7, i - 2, "+");
+                            Clear(border.SecondRoadLine - 8, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 8, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i, "+");
                         }
 
-                        if (i == 6)
+                        else if (i == 6)
                         {
-                            DrowMyCar(border.SecondRoadLine - 8, 3, "+");
-                            Clear(border.SecondRoadLine - 7, 3);
-                            DrowMyCar(border.SecondRoadLine - 6, 3, "+");
-                            Clear(border.SecondRoadLine - 6, 4);
-                            DrowMyCar(border.SecondRoadLine - 7, 4, "+");
-                            Clear(border.SecondRoadLine - 8, 4);
-                            DrowMyCar(border.SecondRoadLine - 6, 5, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 5, "+");
-                            DrowMyCar(border.SecondRoadLine - 8, 5, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 6, "+");
+                            DrowMyCar(border.SecondRoadLine - 8, i - 3, "+");
+                            Clear(border.SecondRoadLine - 7, i - 3);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 3, "+");
+                            Clear(border.SecondRoadLine - 6, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 7, i - 2, "+");
+                            Clear(border.SecondRoadLine - 8, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 8, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i, "+");
                         }
 
-
-                        if (i>6 && i < 23)
+                        else if (i > 6 && i < 23)
                         {
                             DrowMyCar(border.SecondRoadLine - 7, i, "+");
                             DrowMyCar(border.SecondRoadLine - 6, i - 1, "+");
                             DrowMyCar(border.SecondRoadLine - 7, i - 1, "+");
                             DrowMyCar(border.SecondRoadLine - 8, i - 1, "+");
-                            DrowMyCar(border.SecondRoadLine - 6, i - 2, " ");
+                            Clear(border.SecondRoadLine - 6, i - 2);
                             DrowMyCar(border.SecondRoadLine - 7, i - 2, "+");
-                            DrowMyCar(border.SecondRoadLine - 8, i - 2, " ");
+                            Clear(border.SecondRoadLine - 8, i - 2);
                             DrowMyCar(border.SecondRoadLine - 6, i - 3, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, i - 3, " ");
+                            Clear(border.SecondRoadLine - 7, i - 3);
                             DrowMyCar(border.SecondRoadLine - 8, i - 3, "+");
                             Clear(border.SecondRoadLine - 6, i - 4);
                             Clear(border.SecondRoadLine - 8, i - 4);
                         }
 
-                        //if (i < 8)
-                        //{
-                        //    for (int j = 1; j < 4; j++)
-                        //    {
-                        //        DrowMyCar(border.SecondRoadLine - 7, j, " ");
-                        //        DrowMyCar(border.SecondRoadLine - 6, j, " ");
-                        //        DrowMyCar(border.SecondRoadLine - 8, j, " ");
-
-                        //    }
-                        //}
-
-                        //if (i >= y && i < 23)
-                        //{
-                        //    DrowMyCar(border.SecondRoadLine - 7, y, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 6, y, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 8, y, " ");
-                        //    y++;
-                        //}
-
-                        if (i == 23)
+                        else if (i == 23)
                         {
-                            
-                            DrowMyCar(border.SecondRoadLine - 6, 22, "+");
-                            DrowMyCar(border.SecondRoadLine - 7, 22, "+");
-                            DrowMyCar(border.SecondRoadLine - 8, 22, "+");
-                            Clear(border.SecondRoadLine - 6, 21);
-                            DrowMyCar(border.SecondRoadLine - 7, 21, "+");
-                            Clear(border.SecondRoadLine - 8, 21);
-                            DrowMyCar(border.SecondRoadLine - 6, 20, "+");
-                            Clear(border.SecondRoadLine - 7, 20);
-                            DrowMyCar(border.SecondRoadLine - 8, 20, "+");
-                            Clear(border.SecondRoadLine - 6, 19);
-                            Clear(border.SecondRoadLine - 8, 19);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 7, i - 1, "+");
+                            DrowMyCar(border.SecondRoadLine - 8, i - 1, "+");
+                            Clear(border.SecondRoadLine - 6, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 7, i - 2, "+");
+                            Clear(border.SecondRoadLine - 8, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 3, "+");
+                            Clear(border.SecondRoadLine - 7, i - 3);
+                            DrowMyCar(border.SecondRoadLine - 8, i - 3, "+");
+                            Clear(border.SecondRoadLine - 6, i - 4);
+                            Clear(border.SecondRoadLine - 8, i - 4);
+                            temp = 2;
                         }
 
-                        if (i == 24)
+                        else if (i == 24)
                         {
-                            Clear(border.SecondRoadLine - 6, 22);
-                            DrowMyCar(border.SecondRoadLine - 7, 22, "+");
-                            Clear(border.SecondRoadLine - 8, 22);                         
-                            DrowMyCar(border.SecondRoadLine - 6, 21, "+");
-                            Clear(border.SecondRoadLine - 7, 21);
-                            DrowMyCar(border.SecondRoadLine - 8, 21, "+");
-                            Clear(border.SecondRoadLine - 6, 20);
-                            Clear(border.SecondRoadLine - 8, 20);
+                            Clear(border.SecondRoadLine - 6, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 7, i - 2, "+");
+                            Clear(border.SecondRoadLine - 8, i - 2);
+                            DrowMyCar(border.SecondRoadLine - 6, i - 3, "+");
+                            Clear(border.SecondRoadLine - 7, i - 3);
+                            DrowMyCar(border.SecondRoadLine - 8, i - 3, "+");
+                            Clear(border.SecondRoadLine - 6, i - 4);
+                            Clear(border.SecondRoadLine - 8, i - 4);
                         }
 
-                        if (i == 25)
-                        {                           
-                            DrowMyCar(border.SecondRoadLine - 6, 22, "+");
-                            Clear(border.SecondRoadLine - 7, 22);
-                            DrowMyCar(border.SecondRoadLine - 8, 22, "+");
-                            Clear(border.SecondRoadLine - 6, 21);
-                            Clear(border.SecondRoadLine - 8, 21);
+                        else if (i == 25)
+                        {
+                            DrowMyCar(border.SecondRoadLine - 6, i - 3, "+");
+                            Clear(border.SecondRoadLine - 7, i - 3);
+                            DrowMyCar(border.SecondRoadLine - 8, i - 3, "+");
+                            Clear(border.SecondRoadLine - 6, i - 4);
+                            Clear(border.SecondRoadLine - 8, i - 4);
                         }
 
-                        if (i == 26)
-                        {                           
-                            Clear(border.SecondRoadLine - 6, 22);
-                            Clear(border.SecondRoadLine - 8, 22);
+                        else if (i == 26)
+                        {
+                            Clear(border.SecondRoadLine - 6, i - 4);
+                            Clear(border.SecondRoadLine - 8, i - 4);
                         }
 
-                        //if (i >= 23)
-                        //{
+                        if (i == 19 || i == 20 || i == 21 || i == 22)
+                        {
+                            temp = 2;
+                        }
 
-                        //    DrowMyCar(border.SecondRoadLine - 7, 23, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 6, 22, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 7, 22, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 8, 22, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 6, 21, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 7, 21, " ");
-                        //    DrowMyCar(border.SecondRoadLine - 8, 21, " ");
-
-                        //}
                     }
 
+                    if (GameLogic.MyCarPosition == temp || OtherCar.Result == 1)
+                    {
+                        break;
+                    }
+                }
+                lock (locker)
+                {
+                    if (GameLogic.MyCarPosition == temp || OtherCar.Result == 1)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(40, 12);
+                        Console.WriteLine("GAME OVER");
+                        OtherCar.Result = 1;
+                        break;
+                    }
+                }
+            }
+        }
 
+        public void CarFallingLeft()
+        {
+            while (true)
+            {
+                int temp = 1;
+                for (int i = 3; i < 23 + 4; i++)
+                {
+                    Thread.Sleep(100);
+
+                    lock (locker)
+                    {
+                        if (i == 3)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 7, i, "+");
+
+                        }
+
+                        else if (i == 4)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 8, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i, "+");
+                        }
+
+                        else if (i == 5)
+                        {
+                            Clear(border.FirstRoadLine + 6, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 7, i - 2, "+");
+                            Clear(border.FirstRoadLine + 8, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 8, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i, "+");
+
+                        }
+
+                        else if (i == 6)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 8, i - 3, "+");
+                            Clear(border.FirstRoadLine + 7, i - 3);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 3, "+");
+                            Clear(border.FirstRoadLine + 6, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 7, i - 2, "+");
+                            Clear(border.FirstRoadLine + 8, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 8, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i, "+");
+                        }
+
+                        else if (i > 6 && i < 23)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 7, i, "+");
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 8, i - 1, "+");
+                            Clear(border.FirstRoadLine + 6, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 7, i - 2, "+");
+                            Clear(border.FirstRoadLine + 8, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 3, "+");
+                            Clear(border.FirstRoadLine + 7, i - 3);
+                            DrowMyCar(border.FirstRoadLine + 8, i - 3, "+");
+                            Clear(border.FirstRoadLine + 6, i - 4);
+                            Clear(border.FirstRoadLine + 8, i - 4);
+                        }
+
+                        else if (i == 23)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 6, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 7, i - 1, "+");
+                            DrowMyCar(border.FirstRoadLine + 8, i - 1, "+");
+                            Clear(border.FirstRoadLine + 6, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 7, i - 2, "+");
+                            Clear(border.FirstRoadLine + 8, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 3, "+");
+                            Clear(border.FirstRoadLine + 7, i - 3);
+                            DrowMyCar(border.FirstRoadLine + 8, i - 3, "+");
+                            Clear(border.FirstRoadLine + 6, i - 4);
+                            Clear(border.FirstRoadLine + 8, i - 4);
+
+                        }
+
+                        else if (i == 24)
+                        {
+                            Clear(border.FirstRoadLine + 6, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 7, i - 2, "+");
+                            Clear(border.FirstRoadLine + 8, i - 2);
+                            DrowMyCar(border.FirstRoadLine + 6, i - 3, "+");
+                            Clear(border.FirstRoadLine + 7, i - 3);
+                            DrowMyCar(border.FirstRoadLine + 8, i - 3, "+");
+                            Clear(border.FirstRoadLine + 6, i - 4);
+                            Clear(border.FirstRoadLine + 8, i - 4);
+                        }
+
+                        else if (i == 25)
+                        {
+                            DrowMyCar(border.FirstRoadLine + 6, i - 3, "+");
+                            Clear(border.FirstRoadLine + 7, i - 3);
+                            DrowMyCar(border.FirstRoadLine + 8, i - 3, "+");
+                            Clear(border.FirstRoadLine + 6, i - 4);
+                            Clear(border.FirstRoadLine + 8, i - 4);
+                        }
+
+                        else if (i == 26)
+                        {
+                            Clear(border.FirstRoadLine + 6, i - 4);
+                            Clear(border.FirstRoadLine + 8, i - 4);
+                        }
+
+                        if (i == 19 || i == 20 || i == 21 || i == 22)
+                        {
+                            temp = 3;
+                        }
+                    }
+
+                    if (GameLogic.MyCarPosition == temp || OtherCar.Result == 1)
+                    {
+                        break;
+                    }
+
+                }
+                lock (locker)
+                {
+                    if (GameLogic.MyCarPosition == temp || OtherCar.Result == 1)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(40, 12);
+                        Console.WriteLine("GAME OVER");
+                        OtherCar.Result = 1;
+                        break;
+                    }
                 }
             }
         }
     }
 }
+

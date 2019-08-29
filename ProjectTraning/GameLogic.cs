@@ -8,48 +8,49 @@ namespace ProjectTraning
 {
     class GameLogic : Draw
     {
-        MyCar mycar = new MyCar();
-
+        public static int MyCarPosition { get; set; }
+ 
         Border border = new Border();
 
-        OtherCar othercar = new OtherCar();
+        MyCar myCar = new MyCar();
+     
         public void Play()
         {
-            
-            mycar.Car();
+            myCar.Car();
+
+            GameLogic.MyCarPosition = 3;
 
             while (true)
-            {
-                var button = Console.ReadKey(true);
+            {  
+                    var button = Console.ReadKey(true);
 
-                lock (locker)
-                {
-                    if (button.Key == ConsoleKey.RightArrow)
+                    lock (locker)
                     {
+                        if (button.Key == ConsoleKey.RightArrow)
+                    {
+                        GameLogic.MyCarPosition = 2;
                         MuveRight();
+                        
                     }
 
                     else if (button.Key == ConsoleKey.LeftArrow)
                     {
                         MuveLeft();
+                        GameLogic.MyCarPosition = 3;
                     }
-
-                    
-                }
-            }
-
-
+                }              
+            }         
         }
 
         public void MuveLeft()
         {
-            DrowMyCar(border.FirstRoadLine + 6, 22, "x");
-            DrowMyCar(border.FirstRoadLine + 7, 21, "x");
-            DrowMyCar(border.FirstRoadLine + 8, 22, "x");
-            DrowMyCar(border.FirstRoadLine + 8, 20, "x");
-            DrowMyCar(border.FirstRoadLine + 7, 20, "x");
-            DrowMyCar(border.FirstRoadLine + 6, 20, "x");
-            DrowMyCar(border.FirstRoadLine + 7, 19, "x");
+            DrowMyCar(border.FirstRoadLine + 6, 22, CarValue);
+            DrowMyCar(border.FirstRoadLine + 7, 21, CarValue);
+            DrowMyCar(border.FirstRoadLine + 8, 22, CarValue);
+            DrowMyCar(border.FirstRoadLine + 8, 20, CarValue);
+            DrowMyCar(border.FirstRoadLine + 7, 20, CarValue);
+            DrowMyCar(border.FirstRoadLine + 6, 20, CarValue);
+            DrowMyCar(border.FirstRoadLine + 7, 19, CarValue);
 
             Clear(border.SecondRoadLine - 6, 22);
             Clear(border.SecondRoadLine - 7, 21);
@@ -62,13 +63,13 @@ namespace ProjectTraning
 
         public void MuveRight()
         {
-            DrowMyCar(border.SecondRoadLine - 6, 22, "x");
-            DrowMyCar(border.SecondRoadLine - 7, 21, "x");
-            DrowMyCar(border.SecondRoadLine - 8, 22, "x");
-            DrowMyCar(border.SecondRoadLine - 8, 20, "x");
-            DrowMyCar(border.SecondRoadLine - 7, 20, "x");
-            DrowMyCar(border.SecondRoadLine - 6, 20, "x");
-            DrowMyCar(border.SecondRoadLine - 7, 19, "x");
+            DrowMyCar(border.SecondRoadLine - 6, 22, CarValue);
+            DrowMyCar(border.SecondRoadLine - 7, 21, CarValue);
+            DrowMyCar(border.SecondRoadLine - 8, 22, CarValue);
+            DrowMyCar(border.SecondRoadLine - 8, 20, CarValue);
+            DrowMyCar(border.SecondRoadLine - 7, 20, CarValue);
+            DrowMyCar(border.SecondRoadLine - 6, 20, CarValue);
+            DrowMyCar(border.SecondRoadLine - 7, 19, CarValue);
 
             Clear(border.FirstRoadLine + 6, 22);
             Clear(border.FirstRoadLine + 7, 21);
@@ -78,9 +79,5 @@ namespace ProjectTraning
             Clear(border.FirstRoadLine + 6, 20);
             Clear(border.FirstRoadLine + 7, 19);
         }
-
-
-
-        
     }
 }

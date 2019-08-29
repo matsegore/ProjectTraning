@@ -9,31 +9,29 @@ namespace ProjectTraning
 {
     class Border
     {
-        int roadHeight = 20;
+        int roadHeight;
 
         public int FirstRoadLine { get; set; }
 
         public int SecondRoadLine { get; set; }
 
-        
-
         public Border()
         {
+            this.roadHeight = 20;
+
             this.FirstRoadLine = 30;
 
             this.SecondRoadLine = 60;
         }
 
-        public void NewMatrics()
+        public void NewBorder()
         {
-            
-             while (true)
+            while (true)
             {
-               
-                    for (int j = 1; j <= 3; j++)
-                    {
-                    
-                        Thread.Sleep(200);
+                for (int j = 1; j <= 3; j++)
+                {
+                    Thread.Sleep(200);
+
                     lock (Draw.locker)
                     {
                         for (int i = 0; i < this.roadHeight + 1; i++)
@@ -57,7 +55,6 @@ namespace ProjectTraning
                             }
                         }
                     }
-
                 }
             }
         }

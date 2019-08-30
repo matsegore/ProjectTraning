@@ -41,9 +41,9 @@ namespace ProjectTraning
                             if (i % 4 != 0)
                             {
                                 Console.SetCursorPosition(this.FirstRoadLine, i + j);
-                                Console.WriteLine("0");
+                                Console.WriteLine("O");
                                 Console.SetCursorPosition(this.SecondRoadLine, i + j);
-                                Console.WriteLine("0");
+                                Console.WriteLine("O");
                             }
 
                             else if (i % 4 == 0)

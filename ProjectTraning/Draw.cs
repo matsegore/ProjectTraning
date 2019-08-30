@@ -33,20 +33,6 @@ namespace ProjectTraning
             Console.SetCursorPosition(x, y);
             Console.WriteLine(" ");
         }
-        //public void Speed(int value)
-        //{
-        //        var button = Console.ReadKey(true);
-
-        //        if (button.Key == ConsoleKey.UpArrow)
-        //        {
-        //            value = value + 100;
-        //        }
-
-        //        else if (button.Key == ConsoleKey.LeftArrow)
-        //        {
-        //            value = value - 100;
-        //        }          
-        //}
     }
 }
 

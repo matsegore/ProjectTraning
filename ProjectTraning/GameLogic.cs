@@ -44,40 +44,46 @@ namespace ProjectTraning
 
         public void MuveLeft()
         {
-            DrowMyCar(border.FirstRoadLine + 6, 22, CarValue);
-            DrowMyCar(border.FirstRoadLine + 7, 21, CarValue);
-            DrowMyCar(border.FirstRoadLine + 8, 22, CarValue);
-            DrowMyCar(border.FirstRoadLine + 8, 20, CarValue);
-            DrowMyCar(border.FirstRoadLine + 7, 20, CarValue);
-            DrowMyCar(border.FirstRoadLine + 6, 20, CarValue);
-            DrowMyCar(border.FirstRoadLine + 7, 19, CarValue);
+            lock (locker)
+            {
+                DrowMyCar(border.FirstRoadLine + 6, 22, CarValue);
+                DrowMyCar(border.FirstRoadLine + 7, 21, CarValue);
+                DrowMyCar(border.FirstRoadLine + 8, 22, CarValue);
+                DrowMyCar(border.FirstRoadLine + 8, 20, CarValue);
+                DrowMyCar(border.FirstRoadLine + 7, 20, CarValue);
+                DrowMyCar(border.FirstRoadLine + 6, 20, CarValue);
+                DrowMyCar(border.FirstRoadLine + 7, 19, CarValue);
 
-            Clear(border.SecondRoadLine - 6, 22);
-            Clear(border.SecondRoadLine - 7, 21);
-            Clear(border.SecondRoadLine - 8, 22);
-            Clear(border.SecondRoadLine - 8, 20);
-            Clear(border.SecondRoadLine - 7, 20);
-            Clear(border.SecondRoadLine - 6, 20);
-            Clear(border.SecondRoadLine - 7, 19);
+                Clear(border.SecondRoadLine - 6, 22);
+                Clear(border.SecondRoadLine - 7, 21);
+                Clear(border.SecondRoadLine - 8, 22);
+                Clear(border.SecondRoadLine - 8, 20);
+                Clear(border.SecondRoadLine - 7, 20);
+                Clear(border.SecondRoadLine - 6, 20);
+                Clear(border.SecondRoadLine - 7, 19);
+            }
         }
 
         public void MuveRight()
         {
-            DrowMyCar(border.SecondRoadLine - 6, 22, CarValue);
-            DrowMyCar(border.SecondRoadLine - 7, 21, CarValue);
-            DrowMyCar(border.SecondRoadLine - 8, 22, CarValue);
-            DrowMyCar(border.SecondRoadLine - 8, 20, CarValue);
-            DrowMyCar(border.SecondRoadLine - 7, 20, CarValue);
-            DrowMyCar(border.SecondRoadLine - 6, 20, CarValue);
-            DrowMyCar(border.SecondRoadLine - 7, 19, CarValue);
+            lock (locker)
+            {
+                DrowMyCar(border.SecondRoadLine - 6, 22, CarValue);
+                DrowMyCar(border.SecondRoadLine - 7, 21, CarValue);
+                DrowMyCar(border.SecondRoadLine - 8, 22, CarValue);
+                DrowMyCar(border.SecondRoadLine - 8, 20, CarValue);
+                DrowMyCar(border.SecondRoadLine - 7, 20, CarValue);
+                DrowMyCar(border.SecondRoadLine - 6, 20, CarValue);
+                DrowMyCar(border.SecondRoadLine - 7, 19, CarValue);
 
-            Clear(border.FirstRoadLine + 6, 22);
-            Clear(border.FirstRoadLine + 7, 21);
-            Clear(border.FirstRoadLine + 8, 22);
-            Clear(border.FirstRoadLine + 8, 20);
-            Clear(border.FirstRoadLine + 7, 20);
-            Clear(border.FirstRoadLine + 6, 20);
-            Clear(border.FirstRoadLine + 7, 19);
+                Clear(border.FirstRoadLine + 6, 22);
+                Clear(border.FirstRoadLine + 7, 21);
+                Clear(border.FirstRoadLine + 8, 22);
+                Clear(border.FirstRoadLine + 8, 20);
+                Clear(border.FirstRoadLine + 7, 20);
+                Clear(border.FirstRoadLine + 6, 20);
+                Clear(border.FirstRoadLine + 7, 19);
+            }
         }
 
         public void ScoreCalculate()
@@ -99,10 +105,8 @@ namespace ProjectTraning
                     if (OtherCar.Result == 1)
                     {
                         Console.SetCursorPosition(47, 25);
-                        //Console.Write("    ");
                         break;
                     }
-
 
                     Console.SetCursorPosition(47, 25);
                     Console.Write(OtherCar.Score);
@@ -129,10 +133,8 @@ namespace ProjectTraning
                     if (OtherCar.Result == 1)
                     {
                         Console.SetCursorPosition(47, 26);
-                        //Console.Write("    ");
                         break;
                     }
-
 
                     Console.SetCursorPosition(47, 26);
                     Console.Write(OtherCar.Life);

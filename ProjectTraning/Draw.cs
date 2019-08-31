@@ -8,18 +8,23 @@ using System.Threading;
 
 namespace ProjectTraning
 {
-    class Draw
+    public class Draw
     {
         public static object locker = new object();
 
         public string CarValue { get; set; }
 
+        public string FieldAndBorderdValue { get; set; }
+
+        public string BorderValue { get; set; }
+
         public Draw()
         {
             this.CarValue = "x";
+            this.FieldAndBorderdValue = "O";
         }
 
-        public void DrawMyCar(int x, int y, string value)
+        public void CreateElement(int x, int y, string value)
         {
             lock (locker)
             {
@@ -30,8 +35,11 @@ namespace ProjectTraning
 
         public void Clear(int x, int y)
         {
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine(" ");
+            lock (locker)
+            {
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(" ");
+            }
         }
     }
 }

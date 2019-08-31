@@ -7,9 +7,11 @@ using System.Threading;
 
 namespace ProjectTraning
 {
-    class Executer
+    public class Executer
     {
         Random random = new Random();
+
+        GameLogic gamelogic = new GameLogic();
 
         public void StartGame()
         {
@@ -20,9 +22,7 @@ namespace ProjectTraning
             Console.ForegroundColor = ConsoleColor.Blue;
             bordersOfRoad.Start();
 
-
             Thread play = new Thread(new ThreadStart(new GameLogic().Play));
-
             play.Start();
 
             Thread Score = new Thread(new ThreadStart(new GameLogic().ScoreDisplay));
@@ -33,23 +33,19 @@ namespace ProjectTraning
 
             for (int i = 0; i <= 13; i++)
             {
-                Thread.Sleep(200 / new GameLogic().Speed());
+                Thread.Sleep(200 / gamelogic.Speed());
 
                 if (i == random.Next(1, 2))
                 {
-
                     Thread thr1 = new Thread(new ThreadStart(new OtherCar().CarFallingLeft));
                     thr1.Start();
-
                 }
 
-                if (i == random.Next(6, 7))
+                if (i == random.Next(7, 8))
                 {
-
                     Thread thr2 = new Thread(new ThreadStart(new OtherCar().CarFallingRight));
                     thr2.Start();
                 }
-
             }
         }
     }

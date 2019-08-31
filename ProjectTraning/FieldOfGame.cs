@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectTraning
 {
-    class FieldOfGame
+    public class FieldOfGame: Draw
     {
         private int height;
 
@@ -20,31 +20,27 @@ namespace ProjectTraning
         }
 
         public void BordersOfField()
-        {
-            
+        {       
             for (int i = 0; i <= this.width; i++)
             {
-                Console.SetCursorPosition(i, 0);
-                Console.Write("O");
+                CreateElement(i, 0, FieldAndBorderdValue);                
             }
 
             for (int i = 0; i <= this.width; i++)
             {
-                Console.SetCursorPosition(i, this.height);
-                Console.Write("O");
+                CreateElement(i, this.height, FieldAndBorderdValue);              
             }
 
             for (int i = 0; i <= this.height; i++)
             {
-                Console.SetCursorPosition(0, i);
-                Console.WriteLine("O");
+                CreateElement(0, i, FieldAndBorderdValue);
             }
 
             for (int i = 0; i <= this.height; i++)
             {
-                Console.SetCursorPosition(this.width, i);
-                Console.WriteLine("O");
+                CreateElement(this.width, i, FieldAndBorderdValue);
             }
+
             Console.SetWindowSize(91, 29);
         }
     }

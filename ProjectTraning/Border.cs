@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectTraning
 {
-    class Border
+    public class Border: Draw
     {
         int roadHeight;
 
@@ -40,18 +40,15 @@ namespace ProjectTraning
                             
                             if (i % 4 != 0)
                             {
-                                Console.SetCursorPosition(this.FirstRoadLine, i + j);
-                                Console.WriteLine("O");
-                                Console.SetCursorPosition(this.SecondRoadLine, i + j);
-                                Console.WriteLine("O");
+                                CreateElement(this.FirstRoadLine, i + j, FieldAndBorderdValue);
+                                CreateElement(this.SecondRoadLine, i + j, FieldAndBorderdValue);
+                                
                             }
 
                             else if (i % 4 == 0)
                             {
-                                Console.SetCursorPosition(this.FirstRoadLine, i + j);
-                                Console.WriteLine(" ");
-                                Console.SetCursorPosition(this.SecondRoadLine, i + j);
-                                Console.WriteLine(" ");
+                                CreateElement(this.FirstRoadLine, i + j, " ");
+                                CreateElement(this.SecondRoadLine, i + j, " ");
                             }
                         }
                     }

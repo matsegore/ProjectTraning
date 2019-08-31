@@ -10,11 +10,31 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
+            Task1();
             //Task2();
             //Task3();
             //Task4();
-            Task5();
+            //Task5();
+            //Task6();
+            //Task7()
         }
+
+        public static void Task1()
+        {
+            Console.WriteLine("Add string: ");
+
+            string a = Console.ReadLine();
+            
+            var newString = new HashSet<char>(a);
+
+            Console.Write("New String after removing duplicates: ");
+
+            foreach (char c in newString)
+                Console.Write(c);
+
+            Console.WriteLine();
+        }
+
         public static void Task2()
         {
             Console.WriteLine("Add string: ");
@@ -31,6 +51,7 @@ namespace ProjectTraning
             }
             Console.WriteLine($"Number of simbols: {count}");
         }
+
         public static void Task3()
         {
             Console.WriteLine("Add string: ");
@@ -84,6 +105,97 @@ namespace ProjectTraning
                 }
             }
             Console.WriteLine(result);
+        }
+
+        public static void Task6()
+        {
+
+            string text = "One?? Or two? Or one?";
+
+            Console.WriteLine(text);
+
+            Console.Write("Add index: ");
+
+            var index = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+
+            string[] array = text.Split(' ');
+
+            Console.WriteLine($"Word with index {index} is \"{array[index]}\".");
+
+            string word = array[index];
+
+            string letter = word.Substring(0, 1);
+
+            Console.WriteLine($"First symbol of \"{word}\" is \"{letter}\".");
+
+        }
+
+
+
+        public static void Task7()
+        {
+            Console.WriteLine("Add text:");
+
+            var text = Console.ReadLine();
+
+            string[] arrayOfText = text.Split(' ');
+
+            int arrayLenght = arrayOfText.Length;
+
+            string temp = string.Empty;
+
+            for (int i = 0, j = arrayLenght - 1; i < j & j < arrayLenght; i++, j--)
+            {
+                temp = arrayOfText[i];
+
+                arrayOfText[i] = arrayOfText[j];
+
+                arrayOfText[j] = temp;
+            }
+
+            Console.WriteLine("Swapped text:");
+
+            Console.WriteLine(string.Join(" ", arrayOfText));
+
+        }
+
+
+
+        public static void Task8()
+        {
+            Console.WriteLine("Enter text:");
+
+            var text = Console.ReadLine();
+
+            string[] arrayOfText = text.Split(' ');
+
+            int maxSize = arrayOfText[0].Length;
+
+            string maxSizeWord = string.Empty;
+
+            int minSize = arrayOfText[0].Length;
+
+            string minSizeWord = string.Empty;
+
+            for (int i = 0; i < arrayOfText.Length; i++)
+            {
+                if (maxSize < arrayOfText[i].Length)
+                {
+                    maxSize = arrayOfText[i].Length;
+
+                    maxSizeWord = arrayOfText[i];
+                }
+
+                if (minSize > arrayOfText[i].Length)
+                {
+                    minSize = arrayOfText[i].Length;
+
+                    minSizeWord = arrayOfText[i];
+                }
+            }
+            Console.WriteLine($"Longest word: '{maxSizeWord}' Lenght: {maxSize} Shortest word: '{minSizeWord}' Lenght {minSize}");
         }
 
     }

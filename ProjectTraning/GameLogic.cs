@@ -30,7 +30,6 @@ namespace ProjectTraning
                     {
                         GameLogic.MyCarPosition = 2;
                         MuveRight();
-
                     }
 
                     else if (button.Key == ConsoleKey.LeftArrow)
@@ -46,13 +45,13 @@ namespace ProjectTraning
         {
             lock (locker)
             {
-                DrowMyCar(border.FirstRoadLine + 6, 22, CarValue);
-                DrowMyCar(border.FirstRoadLine + 7, 21, CarValue);
-                DrowMyCar(border.FirstRoadLine + 8, 22, CarValue);
-                DrowMyCar(border.FirstRoadLine + 8, 20, CarValue);
-                DrowMyCar(border.FirstRoadLine + 7, 20, CarValue);
-                DrowMyCar(border.FirstRoadLine + 6, 20, CarValue);
-                DrowMyCar(border.FirstRoadLine + 7, 19, CarValue);
+                DrawMyCar(border.FirstRoadLine + 6, 22, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 21, CarValue);
+                DrawMyCar(border.FirstRoadLine + 8, 22, CarValue);
+                DrawMyCar(border.FirstRoadLine + 8, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 6, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 19, CarValue);
 
                 Clear(border.SecondRoadLine - 6, 22);
                 Clear(border.SecondRoadLine - 7, 21);
@@ -68,13 +67,13 @@ namespace ProjectTraning
         {
             lock (locker)
             {
-                DrowMyCar(border.SecondRoadLine - 6, 22, CarValue);
-                DrowMyCar(border.SecondRoadLine - 7, 21, CarValue);
-                DrowMyCar(border.SecondRoadLine - 8, 22, CarValue);
-                DrowMyCar(border.SecondRoadLine - 8, 20, CarValue);
-                DrowMyCar(border.SecondRoadLine - 7, 20, CarValue);
-                DrowMyCar(border.SecondRoadLine - 6, 20, CarValue);
-                DrowMyCar(border.SecondRoadLine - 7, 19, CarValue);
+                DrawMyCar(border.SecondRoadLine - 6, 22, CarValue);
+                DrawMyCar(border.SecondRoadLine - 7, 21, CarValue);
+                DrawMyCar(border.SecondRoadLine - 8, 22, CarValue);
+                DrawMyCar(border.SecondRoadLine - 8, 20, CarValue);
+                DrawMyCar(border.SecondRoadLine - 7, 20, CarValue);
+                DrawMyCar(border.SecondRoadLine - 6, 20, CarValue);
+                DrawMyCar(border.SecondRoadLine - 7, 19, CarValue);
 
                 Clear(border.FirstRoadLine + 6, 22);
                 Clear(border.FirstRoadLine + 7, 21);
@@ -86,7 +85,7 @@ namespace ProjectTraning
             }
         }
 
-        public void ScoreCalculate()
+        public void ScoreDisplay()
         {
 
             lock (locker)
@@ -111,7 +110,6 @@ namespace ProjectTraning
                     Console.SetCursorPosition(47, 25);
                     Console.Write(OtherCar.Score);
                 }
-
             }
         }
 
@@ -139,9 +137,20 @@ namespace ProjectTraning
                     Console.SetCursorPosition(47, 26);
                     Console.Write(OtherCar.Life);
                 }
-
             }
         }
+        public int Speed()
+        {
+            int temp = 1;
+
+            if (OtherCar.Score > 100)
+            {
+                temp = 2;
+            }
+
+            return temp;
+        }
+
     }
 }
 

@@ -19,7 +19,7 @@ namespace ProjectTraning
             this.CarValue = "x";
         }
 
-        public void DrowMyCar(int x, int y, string value)
+        public void DrawMyCar(int x, int y, string value)
         {
             lock (locker)
             {

@@ -37,7 +37,7 @@ namespace ProjectTraning
                         for (int i = 0; i < this.roadHeight + 1; i++)
                         {
                             Console.CursorVisible = false;
-
+                            
                             if (i % 4 != 0)
                             {
                                 Console.SetCursorPosition(this.FirstRoadLine, i + j);

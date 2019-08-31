@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Border.cs" />
     <Compile Include="Draw.cs" />
+    <Compile Include="Executer.cs" />
     <Compile Include="FieldOfGame.cs" />
     <Compile Include="GameLogic.cs" />
     <Compile Include="MyCar.cs" />

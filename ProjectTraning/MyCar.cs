@@ -14,13 +14,13 @@ namespace ProjectTraning
         {
             lock (locker)
             {
-                DrowMyCar(border.FirstRoadLine + 6, 22, "x");
-                DrowMyCar(border.FirstRoadLine + 7, 21, "x");
-                DrowMyCar(border.FirstRoadLine + 8, 22, "x");
-                DrowMyCar(border.FirstRoadLine + 8, 20, "x");
-                DrowMyCar(border.FirstRoadLine + 7, 20, "x");
-                DrowMyCar(border.FirstRoadLine + 6, 20, "x");
-                DrowMyCar(border.FirstRoadLine + 7, 19, "x");
+                DrawMyCar(border.FirstRoadLine + 6, 22, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 21, CarValue);
+                DrawMyCar(border.FirstRoadLine + 8, 22, CarValue);
+                DrawMyCar(border.FirstRoadLine + 8, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 6, 20, CarValue);
+                DrawMyCar(border.FirstRoadLine + 7, 19, CarValue);
             }
                        
         }

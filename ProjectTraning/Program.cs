@@ -11,7 +11,8 @@ namespace ProjectTraning
         static void Main(string[] args)
         {
             //new Bank().BankLogic();
-            new ATM().Execute();
+            //new ATM().Execute();
+            new Strings().Execute();
         }
     }
 }

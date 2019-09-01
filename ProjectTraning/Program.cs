@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectTraning.StudentList;
 using ProjectTraning.StudentsDictionary;
-
+using ProjectTraning.TasksStak;
 
 namespace ProjectTraning
 {
@@ -14,7 +14,8 @@ namespace ProjectTraning
         static void Main(string[] args)
         {
             //new Management().Execute();
-            new Dictionary().DictionaryExecute();
+            //new Dictionary().DictionaryExecute();
+            new QueueManagement().QueueExecute();
         }
     }
 }

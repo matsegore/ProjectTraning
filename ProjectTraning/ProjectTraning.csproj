@@ -50,12 +50,14 @@
     <Compile Include="StudentsList\Management.cs" />
     <Compile Include="StudentsList\Student.cs" />
     <Compile Include="StudentsList\StudentList.cs" />
+    <Compile Include="TasksStak\QueueManagement.cs" />
+    <Compile Include="TasksStak\Task.cs" />
+    <Compile Include="TasksStak\TaskList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder3\" />
     <Folder Include="NewFolder4\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

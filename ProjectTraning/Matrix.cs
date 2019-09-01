@@ -11,7 +11,7 @@ namespace ProjectTraning
     {
         public static object locker = new object();
 
-        private Random random;
+        public static Random random;
 
         private int Height;
 
@@ -19,11 +19,11 @@ namespace ProjectTraning
 
         public Matrix()
         {
-            this.random = new Random();
+            random = new Random();
 
-            this.Width = 120;
+            this.Width = Console.WindowWidth;
 
-            this.Height = 30;
+            this.Height = Console.WindowHeight;
         }
 
         public void NewMatrics()
@@ -35,15 +35,13 @@ namespace ProjectTraning
 
                 int randV = random.Next(1, 20);
 
-                int randomThred = random.Next(50, 100);
 
                 Console.CursorVisible = false;
-                
-                
+
+
                 for (int i = 0, y = 0; i < this.Height + randV + 1; i++)
                 {
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Thread.Sleep(50);
+
                     lock (locker)
                     {
                         if (i < this.Height)
@@ -53,15 +51,10 @@ namespace ProjectTraning
                             Console.ForegroundColor = ConsoleColor.Green;
 
                         }
+                    }
 
-                        if (i >= randV)
-                        {
-                            Console.SetCursorPosition(rand, y);
-                            Console.WriteLine(" ");
-                            y++;
-                            
-                        }
-
+                    lock (locker)
+                    {
                         if (i > 0)
                         {
                             var prev = 0;
@@ -78,21 +71,36 @@ namespace ProjectTraning
                                     break;
                                 }
                             }
-
-                            if (i >= this.Height)
+                            lock (locker)
                             {
-                                while (y + next <= this.Height)
+                                if (i >= this.Height)
                                 {
+                                    while (y + next <= this.Height)
+                                    {
 
-                                    Console.SetCursorPosition(rand, y + next);
-                                    Console.WriteLine(Convert.ToChar(random.Next(50, 100)));
-                                    next++;
+                                        Console.SetCursorPosition(rand, y + next);
+                                        Console.WriteLine(Convert.ToChar(random.Next(50, 100)));
+                                        next++;
+                                    }
+                                }
+                            }
+                            lock (locker)
+                            {
+                                if (i >= randV)
+                                {
+                                    Console.SetCursorPosition(rand, y);
+                                    Console.WriteLine(" ");
+                                    y++;
+
                                 }
                             }
                         }
+
+
                     }
                 }
             }
         }
     }
 }
+

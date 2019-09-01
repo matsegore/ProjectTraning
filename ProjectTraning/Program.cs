@@ -11,11 +11,13 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 50; i++)
+
+
+            for (int i = 0; i < 30; i++)
             {
-                Thread.Sleep(50);
-                Thread thr = new Thread(new ThreadStart(new Matrix().NewMatrics));
-                thr.Start();
+                Thread.Sleep(500);
+                    Thread thr = new Thread(new ThreadStart(new Matrix().NewMatrics));
+                    thr.Start();
             }
         }
     }

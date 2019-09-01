@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjectTraning.StudentList;
+using ProjectTraning.StudentsDictionary;
+
 
 namespace ProjectTraning
 {
@@ -11,7 +13,8 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            new Management().Execute();
+            //new Management().Execute();
+            new Dictionary().DictionaryExecute();
         }
     }
 }

@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hunter.cs" />
+    <Compile Include="HuntEventArgs.cs" />
+    <Compile Include="Hunting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rabbit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

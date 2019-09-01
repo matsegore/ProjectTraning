@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATM.cs" />
+    <Compile Include="Bank.cs" />
+    <Compile Include="CamelCase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="TriangleOfOddNumbers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

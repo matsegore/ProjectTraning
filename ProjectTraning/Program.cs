@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ProjectTraning.StudentList;
 using ProjectTraning.StudentsDictionary;
 using ProjectTraning.TasksStak;
+using ProjectTraning.QueueBooks;
 
 namespace ProjectTraning
 {
@@ -15,7 +16,8 @@ namespace ProjectTraning
         {
             //new Management().Execute();
             //new Dictionary().DictionaryExecute();
-            new QueueManagement().QueueExecute();
+            //new QueueManagement().QueueExecute();
+            new BookManagment().StackExecute();
         }
     }
 }

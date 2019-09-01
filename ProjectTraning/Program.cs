@@ -12,7 +12,8 @@ namespace ProjectTraning
         {
             //new Bank().BankLogic();
             //new ATM().Execute();
-            new Strings().Execute();
+            //new Strings().Execute();
+            new CamelCase().Execute();
         }
     }
 }

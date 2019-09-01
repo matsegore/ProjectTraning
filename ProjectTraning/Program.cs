@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjectTraning.Task1;
+using ProjectTraning.Task2;
 
 namespace ProjectTraning
 {
@@ -12,7 +13,8 @@ namespace ProjectTraning
         static void Main(string[] args)
 
         {
-            new Execute().SalaryAndAge();
+            //new Execute().SalaryAndAge();
+            new ExecuteForWorker().GetSalaryAndAge();
         }
     }
 }

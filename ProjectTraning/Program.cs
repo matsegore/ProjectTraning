@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjectTraning.Color;
+using ProjectTraning.School;
 
 namespace ProjectTraning
 {
@@ -11,7 +12,8 @@ namespace ProjectTraning
     {
         static void Main(string[] args)
         {
-            new ColorEnum().Execute();
+            //new ColorEnum().Execute();
+            new SchoolInfo().Execute();
         }
     }
 }

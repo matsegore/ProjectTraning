@@ -13,9 +13,9 @@ namespace ProjectTraning
         {
 
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 50; i++)
             {
-                Thread.Sleep(500);
+               Thread.Sleep(500);
                     Thread thr = new Thread(new ThreadStart(new Matrix().NewMatrics));
                     thr.Start();
             }
